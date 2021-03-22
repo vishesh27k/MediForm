@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad556992-66d2-4c82-8dcd-3b7583cf8eec" name="Default Changelist" comment="" />
+    <list default="true" id="f0d155e9-b2df-4ee7-a375-8848d2d8eee9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1q7ase09wf4YsxLBIAeXjT8mSUK" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1q7eV6OupXziTKEEviT92uEXlaF" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -38,11 +32,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ad556992-66d2-4c82-8dcd-3b7583cf8eec" name="Default Changelist" comment="" />
-      <created>1616433289812</created>
+      <changelist id="f0d155e9-b2df-4ee7-a375-8848d2d8eee9" name="Default Changelist" comment="" />
+      <created>1616435075382</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1616433289812</updated>
+      <updated>1616435075382</updated>
     </task>
     <servers />
   </component>
