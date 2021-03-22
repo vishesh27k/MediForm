@@ -1,0 +1,41 @@
+import java.util.Date;
+
+public class RegForm
+{
+    public String name;
+    public String address;
+    public int phone;
+    public String emergencyContactName;
+    public int emergencyContactNumber;
+    public Boolean insurance;
+    public String insuranceProvider;
+    public String insuranceID:
+    public String primaryPhysician;
+    public Boolean currentMedication;
+    public String[] medicationName;
+    public String[] medicalHistory;
+    public String[] symptoms;
+    public Date dateOfBirth;
+    public Date dateOfVisit;
+
+    public RegForm(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, Boolean insurance,
+    String insuranceProvider, String insuranceID, String primaryPhysician, Boolean currentMedication, String[] medicationName, String[] medicalHistory,
+    String[] symptoms, Date dateOfBirth , Date dateOfVisit)
+    {
+        this.name = name;
+        this.address = address;
+        this.phone = phone;
+        this.emergencyContactName = emergencyContactName;
+        this.emergencyContactNumber = emergencyContactNumber;
+        this.insurance = insurance;
+        this.insuranceProvider = insuranceProvider;
+        this.insuranceID = insuranceID;
+        this.primaryPhysician = primaryPhysician;
+        this.currentMedication =currentMedication;
+        this.medicationName = medicationName;
+        this.medicalHistory = medicalHistory;
+        this.symptoms = symptoms;
+        this.dateOfBirth = dateOfBirth;
+        this.dateOfVisit = dateOfVisit;
+    }
+}
