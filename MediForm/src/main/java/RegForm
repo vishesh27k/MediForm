@@ -2,6 +2,7 @@ import java.util.Date;
 
 public class RegForm
 {
+    //regForm variables
     public String name;
     public String address;
     public int phone;
@@ -18,6 +19,7 @@ public class RegForm
     public Date dateOfBirth;
     public Date dateOfVisit;
 
+    //constructor to initiate every veriable
     public RegForm(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, Boolean insurance,
     String insuranceProvider, String insuranceID, String primaryPhysician, Boolean currentMedication, String[] medicationName, String[] medicalHistory,
     String[] symptoms, Date dateOfBirth , Date dateOfVisit)
@@ -37,5 +39,125 @@ public class RegForm
         this.symptoms = symptoms;
         this.dateOfBirth = dateOfBirth;
         this.dateOfVisit = dateOfVisit;
+    }
+
+    //get and set Address
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    //get and set currentMedicaion
+    public Boolean getCurrentMedication() {
+        return currentMedication;
+    }
+    public void setCurrentMedication(Boolean currentMedication) {
+        this.currentMedication = currentMedication;
+    }
+
+    //get and set Insurance
+    public Boolean getInsurance() {
+        return insurance;
+    }
+    public void setInsurance(Boolean insurance) {
+        this.insurance = insurance;
+    }
+
+    //get and set DOB
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    //get and set DateOfVisit
+    public Date getDateOfVisit() {
+        return dateOfVisit;
+    }
+    public void setDateOfVisit(Date dateOfVisit) {
+        this.dateOfVisit = dateOfVisit;
+    }
+
+    //Get and set EmergencyContactNumber
+    public int getEmergencyContactNumber() {
+        return emergencyContactNumber;
+    }
+    public void setEmergencyContactNumber(int emergencyContactNumber) {
+        this.emergencyContactNumber = emergencyContactNumber;
+    }
+
+    //get and set Phone
+    public int getPhone() {
+        return phone;
+    }
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
+    //get and set EmergencyContactName
+    public String getEmergencyContactName() {
+        return emergencyContactName;
+    }
+    public void setEmergencyContactName(String emergencyContactName) {
+        this.emergencyContactName = emergencyContactName;
+    }
+
+    //get and set insuranceID
+    public String getInsuranceID() {
+        return insuranceID;
+    }
+    public void setInsuranceID(String insuranceID) {
+        this.insuranceID = insuranceID;
+    }
+
+    //get and set insuranceProvider
+    public String getInsuranceProvider() {
+        return insuranceProvider;
+    }
+    public void setInsuranceProvider(String insuranceProvider) {
+        this.insuranceProvider = insuranceProvider;
+    }
+
+    //get and set name
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    //get and set primary Physician
+    public String getPrimaryPhysician() {
+        return primaryPhysician;
+    }
+    public void setPrimaryPhysician(String primaryPhysician) {
+        this.primaryPhysician = primaryPhysician;
+    }
+
+    //get and set medicalHistory
+    public String[] getMedicalHistory() {
+        return medicalHistory;
+    }
+    public void setMedicalHistory(String[] medicalHistory) {
+        this.medicalHistory = medicalHistory;
+    }
+
+    //get and set medicationName
+    public String[] getMedicationName() {
+        return medicationName;
+    }
+    public void setMedicationName(String[] medicationName) {
+        this.medicationName = medicationName;
+    }
+
+    //get and set symptoms
+    public String[] getSymptoms() {
+        return symptoms;
+    }
+    public void setSymptoms(String[] symptoms) {
+        this.symptoms = symptoms;
     }
 }
