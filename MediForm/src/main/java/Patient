@@ -68,10 +68,10 @@ public class patient {
     public Boolean tornMuscleTendon;
 
     //constructor to initiate every variable
-    public RegForm(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, Boolean insurance,
-                   String insuranceProvider, String insuranceID, String primaryPhysician, Boolean currentMedication, String[] medicationName, String[] medicalHistory,
-                   String[] symptoms, Date dateOfBirth, Date dateOfVisit, int patientID, float height, float weight, float temperature, String bloodPressure,
-                   String pulseRate, String assignedPhysician, Boolean isAdmit, String content, int pain, int anticoagulant, int antiretroviral, int betaBlocker, int insulin, int antiInflammatory,
+    public RegForm(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, Boolean insurance, String insuranceProvider,
+                   String insuranceID, String primaryPhysician, Boolean currentMedication, String[] medicationName, String[] medicalHistory, String[] symptoms,
+                   Date dateOfBirth, Date dateOfVisit, int patientID, float height, float weight, float temperature, String bloodPressure, String pulseRate,
+                   String assignedPhysician, Boolean isAdmit, String content, int pain, int anticoagulant, int antiretroviral, int betaBlocker, int insulin, int antiInflammatory,
                    int ursodiol, int calciumReducer, Boolean nucleicAcid, Boolean dheaSulfateSerum, Boolean cReactiveProtein, Boolean alc, Boolean xray, Boolean ctScan,
                    Boolean mri, Boolean urinalysis, Boolean stoolCultures, Boolean brokenBone, Boolean heartAttack, Boolean laceration, Boolean hivAIDS, Boolean liverFailure,
                    Boolean kidneyFailure, Boolean diabetes, Boolean infammatoryBowlDisease, Boolean stroke, Boolean tornMuscleTendon, Boolean coagulationPanel) {
