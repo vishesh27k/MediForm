@@ -1,12 +1,10 @@
-import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.MongoClient;
-import com.mongodb.MongoClientSettings;
-import com.mongodb.ConnectionString;
-import com.mongodb.ServerAddress;
-import com.mongodb.MongoCredential;
-import com.mongodb.MongoClientSettings;
+import com.mongodb.*;
+import com.mongodb.client.*;
 import java.net.UnknownHostException;
+
+import org.bson.Document;
+
+import javax.print.Doc;
 
 public class DatabaseInterface {
     ConnectionString connString = new ConnectionString(
@@ -17,5 +15,13 @@ public class DatabaseInterface {
         .retryWrites(true)
         .build();
     MongoClient mongoClient = MongoClients.create(settings);
+
     MongoDatabase database = mongoClient.getDatabase("MediForm");
-}
+    MongoCollection<Document> dbCollection = database.getCollection("user");
+
+    Document document = new Document("username", "test")
+        .append("password", "testPass")
+        .append("role", "nurse");
+
+    dbCollection.insertOne(document);
+}   
