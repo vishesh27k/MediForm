@@ -21,10 +21,17 @@ public class DatabaseInterface {
 
     public static void main(String[] args) throws UnknownHostException{
 
-        Document document = new Document("username", "test")
-            .append("password", "testPass")
-            .append("role", "nurse");
+    }
 
-        collectionUser.insertOne(document);
-    }   
+    public static void findUser(User user) {
+
+    }
+
+    public static void savePatient(Patient patient) {
+
+    }
+
+    public static void findPatient(){
+        
+    }
 }
