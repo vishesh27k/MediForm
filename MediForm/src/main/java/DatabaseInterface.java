@@ -3,6 +3,7 @@ import com.mongodb.client.*;
 import java.net.UnknownHostException;
 import org.bson.Document;
 import javax.print.Doc;
+import org.bson.types.ObjectId;
 
 public class DatabaseInterface {
 
@@ -20,7 +21,10 @@ public class DatabaseInterface {
     public static MongoCollection<Document> collectionPatient = database.getCollection("patient");
 
     public static void main(String[] args) throws UnknownHostException{
-
+        Document testDoc = new Document("_id", new ObjectId());
+        Document testDoc2 = new Document();
+        testDoc.append("field1", testDoc2.append("field2", "value"));
+        collectionUser.insertOne(testDoc);
     }
 
     public static void findUser(User user) {
@@ -28,7 +32,18 @@ public class DatabaseInterface {
     }
 
     public static void savePatient(Patient patient) {
-
+        Document patientDocument = new Document("_id", new ObjectId());
+        Document regForm = new Document();
+        regForm.append("name", patient.getName())
+            .append("address", patient.getAddress())
+            .append("phone", patient.getPhone())
+            .append("emergencyContactName", patient.getEmergencyContactName())
+            .append("emergencyContactNumber", patient.getEmergencyContactNumber())
+            .append("insuranceID", patient.getInsuranceID())
+            .append("primaryPhysician", patient.getPrimaryPhysician())
+            
+        patientDocument.append("patientID", patient.getPatientID());
+        patientDocument.append("regForm", regForm);
     }
 
     public static void findPatient(){
