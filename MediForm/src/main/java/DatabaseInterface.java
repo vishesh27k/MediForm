@@ -40,7 +40,7 @@ public class DatabaseInterface {
             .append("emergencyContactName", patient.getEmergencyContactName())
             .append("emergencyContactNumber", patient.getEmergencyContactNumber())
             .append("insuranceID", patient.getInsuranceID())
-            .append("primaryPhysician", patient.getPrimaryPhysician())
+            .append("primaryPhysician", patient.getPrimaryPhysician());
             
         patientDocument.append("patientID", patient.getPatientID());
         patientDocument.append("regForm", regForm);
