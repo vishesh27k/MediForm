@@ -1,6 +1,49 @@
 import java.util.Date;
 
 public class patient {
+
+    //tests
+    public enum Tests{
+        NUCLEICACID,
+        COAGULATIONSPANEL,
+        CREACVTIVEPROTEIN,
+        ALC,
+        XRAY,
+        CTSCAN,
+        MRI,
+        URINALYSIS,
+        STOOLCULTURES
+    }
+   private ArrayList<Tests> tests = new ArrayList<Tests>();
+
+    //medications
+    public enum Medications{
+        PAIN,
+        ANTICOAGULANT,
+        ANTIRETROVIRAL,
+        BETABLOCKER,
+        INSULIN,
+        ANTIINFLAMMATORY,
+        URSODIOL,
+        CALCIUMREDUCER,
+    }
+    private ArrayList<Medicaions> medications = new ArrayList<Medications>();
+
+    // //diagnosis
+    public enum Diagnosis{
+        BROKENBONE,
+        HEARTATTACK,
+        LACERATION,
+        HIVAIDS,
+        LIVERFAILURE,
+        KIDNEYFAILURE,
+        DIABETES,
+        INFAMMATORYBOWLDISEASE,
+        STROKE,
+        TORNMUSCLETENDON,
+    }
+    private ArrayList<Diagnosis> diagnosis= new ArrayList<Diagnosis>;
+
     //regForm variables
     public String name;
     public String address;
@@ -9,7 +52,7 @@ public class patient {
     public int emergencyContactNumber;
     public Boolean insurance;
     public String insuranceProvider;
-    public String insuranceID:
+    public String insuranceID;
     public String primaryPhysician;
     public Boolean currentMedication;
     public String[] medicationName;
@@ -33,48 +76,11 @@ public class patient {
     //notes variable
     public String content;
 
-    //medication variable
-    public int pain;
-    public int anticoagulant;
-    public int antiretroviral;
-    public int betaBlocker;
-    public int insulin;
-    public int antiInflammatory;
-    public int ursodiol;
-    public int calciumReducer;
-
-    //test variable
-    public Boolean nucleicAcid;
-    public Boolean coagulationPanel;
-    public Boolean dheaSulfateSerum;
-    public Boolean cReactiveProtein;
-    public Boolean alc;
-    public Boolean xray;
-    public Boolean ctScan;
-    public Boolean mri;
-    public Boolean urinalysis;
-    public Boolean stoolCultures;
-
-    //diagnosis variable
-    public Boolean brokenBone;
-    public Boolean heartAttack;
-    public Boolean laceration;
-    public Boolean hivAIDS;
-    public Boolean liverFailure;
-    public Boolean kidneyFailure;
-    public Boolean diabetes;
-    public Boolean infammatoryBowlDisease;
-    public Boolean stroke;
-    public Boolean tornMuscleTendon;
-
     //constructor to initiate every variable
-    public RegForm(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, Boolean insurance, String insuranceProvider,
+    public Patient(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, Boolean insurance, String insuranceProvider,
                    String insuranceID, String primaryPhysician, Boolean currentMedication, String[] medicationName, String[] medicalHistory, String[] symptoms,
-                   Date dateOfBirth, Date dateOfVisit, int patientID, float height, float weight, float temperature, String bloodPressure, String pulseRate,
-                   String assignedPhysician, Boolean isAdmit, String content, int pain, int anticoagulant, int antiretroviral, int betaBlocker, int insulin, int antiInflammatory,
-                   int ursodiol, int calciumReducer, Boolean nucleicAcid, Boolean dheaSulfateSerum, Boolean cReactiveProtein, Boolean alc, Boolean xray, Boolean ctScan,
-                   Boolean mri, Boolean urinalysis, Boolean stoolCultures, Boolean brokenBone, Boolean heartAttack, Boolean laceration, Boolean hivAIDS, Boolean liverFailure,
-                   Boolean kidneyFailure, Boolean diabetes, Boolean infammatoryBowlDisease, Boolean stroke, Boolean tornMuscleTendon, Boolean coagulationPanel) {
+                   Date dateOfBirth, Date dateOfVisit, float height, float weight, float temperature, String bloodPressure, String pulseRate,
+                   String assignedPhysician, Boolean isAdmit, String content, ArrayList<Tests> tests, ArrayList<Medications> medications, ArrayList<Diagnosis> diagnosis) {
         this.name = name;
         this.address = address;
         this.phone = phone;
@@ -91,7 +97,7 @@ public class patient {
         this.dateOfBirth = dateOfBirth;
         this.dateOfVisit = dateOfVisit;
 
-        this.patientID = patientID;
+        //this.patientID = generatePatientID;
 
         this.height = height;
         this.weight = weight;
@@ -103,36 +109,9 @@ public class patient {
 
         this.content = content;
 
-        this.pain = pain;
-        this.anticoagulant = anticoagulant;
-        this.antiretroviral = antiretroviral;
-        this.betaBlocker = betaBlocker;
-        this.insulin = insulin;
-        this.antiInflammatory = antiInflammatory;
-        this.ursodiol = ursodiol;
-        this.calciumReducer = calciumReducer;
-
-        this.nucleicAcid = nucleicAcid;
-        this.coagulationPanel = coagulationPanel;
-        this.dheaSulfateSerum = dheaSulfateSerum;
-        this.cReactiveProtein = cReactiveProtein;
-        this.alc = alc;
-        this.xray = xray;
-        this.ctScan = ctScan;
-        this.mri = mri;
-        this.urinalysis = urinalysis;
-        this.stoolCultures = stoolCultures;
-
-        this.brokenBone = brokenBone;
-        this.heartAttack = heartAttack;
-        this.laceration = laceration;
-        this.hivAIDS = hivAIDS;
-        this.liverFailure = liverFailure;
-        this.kidneyFailure = kidneyFailure;
-        this.diabetes = diabetes;
-        this.infammatoryBowlDisease = infammatoryBowlDisease;
-        this.stroke = stroke;
-        this.tornMuscleTendon = tornMuscleTendon;
+        this.tests = tests;
+        this.medications = medications;
+        this.diagnosis = diagnosis;
 
     }
 
@@ -356,258 +335,38 @@ public class patient {
         this.content = content;
     }
 
-    //medication
-    //get and set pain
-    public int getPain() {
-        return pain;
+    //Tests
+    //get and set tests
+    public ArrayList<Tests> getTests() {
+        return tests;
     }
 
-    public void setPain(int pain) {
-        this.pain = pain;
+    public void setTests(ArrayList<Tests> tests) {
+        this.tests = tests;
     }
 
-    //get and set anticoagulant
-    public int getAnticoagulant() {
-        return anticoagulant;
+    //medications
+    //get and set medicaions
+    public ArrayList<Medicaions> getMedications() {
+        return medications;
     }
 
-    public void setAnticoagulant(int anticoagulant) {
-        this.anticoagulant = anticoagulant;
-    }
-
-    //get and set antiretroviral
-    public int getAntiretroviral() {
-        return antiretroviral;
-    }
-
-    public void setAntiretroviral(int antiretroviral) {
-        this.antiretroviral = antiretroviral;
-    }
-
-    //get and set betaBlocker
-    public int getBetaBlocker() {
-        return betaBlocker;
-    }
-
-    public void setBetaBlocker(int betaBlocker) {
-        this.betaBlocker = betaBlocker;
-    }
-
-    //get and set insulin
-    public int getInsulin() {
-        return insulin;
-    }
-
-    public void setInsulin(int insulin) {
-        this.insulin = insulin;
-    }
-
-    //get and set antiInflammartory
-    public int getAntiInflammatory() {
-        return antiInflammatory;
-    }
-
-    public void setAntiInflammatory(int antiInflammatory) {
-        this.antiInflammatory = antiInflammatory;
-    }
-
-    //get and set ursodial
-    public int getUrsodiol() {
-        return ursodiol;
-    }
-
-    public void setUrsodiol(int ursodiol) {
-        this.ursodiol = ursodiol;
-    }
-
-    //get and set calciumReducer
-    public int getCalciumReducer() {
-        return calciumReducer;
-    }
-
-    public void setCalciumReducer(int calciumReducer) {
-        this.calciumReducer = calciumReducer;
-    }
-
-    //Test
-    //get and set nucleicAcid
-    public Boolean getNucleicAcid() {
-        return nucleicAcid;
-    }
-
-    public void setNucleicAcid(Boolean nucleicAcid) {
-        this.nucleicAcid = nucleicAcid;
-    }
-
-    //get and set coagulationPanel
-    public Boolean getCoagulationPanel() {
-        return coagulationPanel;
-    }
-
-    public void setCoagulationPanel(Boolean coagulationPanel) {
-        this.coagulationPanel = coagulationPanel;
-    }
-
-    //get and set dheaSulfateSerum
-    public Boolean getDheaSulfateSerum() {
-        return dheaSulfateSerum;
-    }
-
-    public void setDheaSulfateSerum(Boolean dheaSulfateSerum) {
-        this.dheaSulfateSerum = dheaSulfateSerum;
-    }
-
-    //get and set cReactiveProtein
-    public Boolean getcReactiveProtein() {
-        return cReactiveProtein;
-    }
-
-    public void setcReactiveProtein(Boolean cReactiveProtein) {
-        this.cReactiveProtein = cReactiveProtein;
-    }
-
-    //get and set alc
-    public Boolean getAlc() {
-        return alc;
-    }
-
-    public void setAlc(Boolean alc) {
-        this.alc = alc;
-    }
-
-    //get and set xray
-    public Boolean getXray() {
-        return xray;
-    }
-
-    public void setXray(Boolean xray) {
-        this.xray = xray;
-    }
-
-    //get and set ctScan
-    public Boolean getCtScan() {
-        return ctScan;
-    }
-
-    public void setCtScan(Boolean ctScan) {
-        this.ctScan = ctScan;
-    }
-
-    //get and set mri
-    public Boolean getMri() {
-        return mri;
-    }
-
-    public void setMri(Boolean mri) {
-        this.mri = mri;
-    }
-
-    //get and set urinalysis
-    public Boolean getUrinalysis() {
-        return urinalysis;
-    }
-
-    public void setUrinalysis(Boolean urinalysis) {
-        this.urinalysis = urinalysis;
-    }
-
-    //get and set stoolCultures
-    public Boolean getStoolCultures() {
-        return stoolCultures;
-    }
-
-    public void setStoolCultures(Boolean stoolCultures) {
-        this.stoolCultures = stoolCultures;
+    public void setMedications(ArrayList<Medicaions> medications) {
+        this.medications = medications;
     }
 
     //diagnosis
-    //get and set brokenBone
-    public Boolean getBrokenBone() {
-        return brokenBone;
+    //get and set diagnosis
+    public ArrayList<Diagnosis> getDiagnosis() {
+        return diagnosis;
     }
 
-    public void setBrokenBone(Boolean brokenBone) {
-        this.brokenBone = brokenBone;
+    public void setDiagnosis(ArrayList<Diagnosis> diagnosis) {
+        this.diagnosis = diagnosis;
     }
 
-    //get and set heartAttack
-    public Boolean getHeartAttack() {
-        return heartAttack;
-    }
-
-    public void setHeartAttack(Boolean heartAttack) {
-        this.heartAttack = heartAttack;
-    }
-
-    //get and set laceration
-    public Boolean getLaceration() {
-        return laceration;
-    }
-
-    public void setLaceration(Boolean laceration) {
-        this.laceration = laceration;
-    }
-
-    //get and set hivAIDS
-    public Boolean getHivAIDS() {
-        return hivAIDS;
-    }
-
-    public void setHivAIDS(Boolean hivAIDS) {
-        this.hivAIDS = hivAIDS;
-    }
-
-    //get and set liverFailure
-    public Boolean getLiverFailure() {
-        return liverFailure;
-    }
-
-    public void setLiverFailure(Boolean liverFailure) {
-        this.liverFailure = liverFailure;
-    }
-
-    //get and set kidneyFailure
-    public Boolean getKidneyFailure() {
-        return kidneyFailure;
-    }
-
-    public void setKidneyFailure(Boolean kidneyFailure) {
-        this.kidneyFailure = kidneyFailure;
-    }
-
-    //get and set diabetes
-    public Boolean getDiabetes() {
-        return diabetes;
-    }
-
-    public void setDiabetes(Boolean diabetes) {
-        this.diabetes = diabetes;
-    }
-
-    //get and set inflammatoryBowelDisease
-    public Boolean getInfammatoryBowlDisease() {
-        return infammatoryBowlDisease;
-    }
-
-    public void setInfammatoryBowlDisease(Boolean infammatoryBowlDisease) {
-        this.infammatoryBowlDisease = infammatoryBowlDisease;
-    }
-
-    //get and set stroke
-    public Boolean getStroke() {
-        return stroke;
-    }
-
-    public void setStroke(Boolean stroke) {
-        this.stroke = stroke;
-    }
-
-    //get and set tornMuscleTendon
-    public Boolean getTornMuscleTendon() {
-        return tornMuscleTendon;
-    }
-
-    public void setTornMuscleTendon(Boolean tornMuscleTendon) {
-        this.tornMuscleTendon = tornMuscleTendon;
+    //toString to check code
+    public String toString(){
+        return "The medications are " + this.medications;
     }
 }
