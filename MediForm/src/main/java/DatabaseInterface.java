@@ -37,13 +37,35 @@ public class DatabaseInterface {
         regForm.append("name", patient.getName())
             .append("address", patient.getAddress())
             .append("phone", patient.getPhone())
+            .append("dataOfBirth", patient.getDateOfBirth())
             .append("emergencyContactName", patient.getEmergencyContactName())
             .append("emergencyContactNumber", patient.getEmergencyContactNumber())
+            .append("insurance", patient.getInsurance())
+            .append("insuranceProvider", patient.getInsuranceProvider())
             .append("insuranceID", patient.getInsuranceID())
-            .append("primaryPhysician", patient.getPrimaryPhysician());
+            .append("primaryPhysician", patient.getPrimaryPhysician())
+            .append("currentMedication", patient.getCurrentMedication())
+            .append("medicationName", patient.getMedicationName())
+            .append("medicalHistory", patient.getMedicalHistory())
+            .append("symptoms", patient.getSymptoms())
+            .append("dateOfVisit", patient.getDateOfVisit());
             
+        Document medForm = new Document();
+        medForm.append("height", patient.getHeight())
+            .append("height", patient.getHeight())
+            .append("weight", patient.getWeight())
+            .append("temperature", patient.getTemperature())
+            .append("bloodPressure", patient.getBloodPressure())
+            .append("pulseRate", patient.getPulseRate())
+            .append("assignedPhysician", patient.getAssignedPhysician())
+            .append("isAdmit", patient.getAdmit());
+
+        Document notes = new Document();
+
         patientDocument.append("patientID", patient.getPatientID());
         patientDocument.append("regForm", regForm);
+        patientDocument.append("medForm", medForm);
+        patientDocument.append("notes", notes);
     }
 
     public static void findPatient(){
