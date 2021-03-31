@@ -49,7 +49,41 @@ public class DatabaseInterface {
             .append("medicalHistory", patient.getMedicalHistory())
             .append("symptoms", patient.getSymptoms())
             .append("dateOfVisit", patient.getDateOfVisit());
-            
+
+        Document medication = new Document();
+        medication.append("pain", patient.getPain())
+            .append("anticoagulant", patient.getAnticoagulant())
+            .append("antiretroviral", patient.getAntiretroviral())
+            .append("betaBlocker", patient.getBetaBlocker())
+            .append("insulin", patient.getInsulin())
+            .append("antiInflammatory", patient.getAntiInflammatory())
+            .append("ursodiol", patient.getUrsodiol())
+            .append("calciumReducer", patient.getCalciumReducer());
+
+        Document test = new Document();
+        test.append("nucleicAcid", patient.getNucleicAcid())
+            .append("coagulationPanel", patient.getCoagulationPanel())
+            .append("dheaSulfateSerum", patient.getDheaSulfateSerum())
+            .append("cReactiveProtein", patient.getcReactiveProtein())
+            .append("alc", patient.getAlc())
+            .append("xray", patient.getXray())
+            .append("ctScan", patient.getCtScan())
+            .append("mri", patient.getMri())
+            .append("urinalysis", patient.getUrinalysis())
+            .append("stoolCultures", patient.getStoolCultures());
+
+        Document diagnosis = new Document();
+        diagnosis.append("brokenBone", patient.getBrokenBone())
+            .append("heartAttack", patient.getHeartAttack())
+            .append("laceration", patient.getLaceration())
+            .append("hivAIDS", patient.getHivAIDS())
+            .append("liverFailure", patient.getLiverFailure())
+            .append("kidneyFailure", patient.getKidneyFailure())
+            .append("diabetes", patient.getDiabetes())
+            .append("IBD", patient.getInfammatoryBowlDisease())
+            .append("stroke", patient.getStroke())
+            .append("tornMuscleTendon", patient.getTornMuscleTendon());
+
         Document medForm = new Document();
         medForm.append("height", patient.getHeight())
             .append("height", patient.getHeight())
@@ -58,7 +92,10 @@ public class DatabaseInterface {
             .append("bloodPressure", patient.getBloodPressure())
             .append("pulseRate", patient.getPulseRate())
             .append("assignedPhysician", patient.getAssignedPhysician())
-            .append("isAdmit", patient.getAdmit());
+            .append("isAdmit", patient.getAdmit())
+            .append("medication", medication)
+            .append("test", test)
+            .append("diagnosis", diagnosis);
 
         Document notes = new Document();
 
