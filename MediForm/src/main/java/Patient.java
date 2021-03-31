@@ -1,86 +1,12 @@
-import java.util.Date;
+import java.util.ArrayList;
 
-public class patient {
-
-    //tests
-    public enum Tests{
-        NUCLEICACID,
-        COAGULATIONSPANEL,
-        CREACVTIVEPROTEIN,
-        ALC,
-        XRAY,
-        CTSCAN,
-        MRI,
-        URINALYSIS,
-        STOOLCULTURES
-    }
-   private ArrayList<Tests> tests = new ArrayList<Tests>();
-
-    //medications
-    public enum Medications{
-        PAIN,
-        ANTICOAGULANT,
-        ANTIRETROVIRAL,
-        BETABLOCKER,
-        INSULIN,
-        ANTIINFLAMMATORY,
-        URSODIOL,
-        CALCIUMREDUCER,
-    }
-    private ArrayList<Medicaions> medications = new ArrayList<Medications>();
-
-    // //diagnosis
-    public enum Diagnosis{
-        BROKENBONE,
-        HEARTATTACK,
-        LACERATION,
-        HIVAIDS,
-        LIVERFAILURE,
-        KIDNEYFAILURE,
-        DIABETES,
-        INFAMMATORYBOWLDISEASE,
-        STROKE,
-        TORNMUSCLETENDON,
-    }
-    private ArrayList<Diagnosis> diagnosis= new ArrayList<Diagnosis>;
-
-    //regForm variables
-    public String name;
-    public String address;
-    public int phone;
-    public String emergencyContactName;
-    public int emergencyContactNumber;
-    public Boolean insurance;
-    public String insuranceProvider;
-    public String insuranceID;
-    public String primaryPhysician;
-    public Boolean currentMedication;
-    public String[] medicationName;
-    public String[] medicalHistory;
-    public String[] symptoms;
-    public Date dateOfBirth;
-    public Date dateOfVisit;
-
-    // patient variable
-    public int patientID;
-
-    //medForm variables
-    public float height;
-    public float weight;
-    public float temperature;
-    public String bloodPressure;
-    public String pulseRate;
-    public String assignedPhysician;
-    public Boolean isAdmit;
-
-    //notes variable
-    public String content;
+public class Patient {
 
     //constructor to initiate every variable
-    public Patient(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, Boolean insurance, String insuranceProvider,
-                   String insuranceID, String primaryPhysician, Boolean currentMedication, String[] medicationName, String[] medicalHistory, String[] symptoms,
-                   Date dateOfBirth, Date dateOfVisit, float height, float weight, float temperature, String bloodPressure, String pulseRate,
-                   String assignedPhysician, Boolean isAdmit, String content, ArrayList<Tests> tests, ArrayList<Medications> medications, ArrayList<Diagnosis> diagnosis) {
+    public Patient(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, boolean insurance, String insuranceProvider,
+                   String insuranceID, String primaryPhysician, boolean currentMedication, ArrayList<String> medicationName, ArrayList<String> symptoms,
+                   String dateOfBirth, String dateOfVisit, float height, float weight, float temperature, String bloodPressure, String pulseRate,
+                   String assignedPhysician, boolean isAdmit, String content) {
         this.name = name;
         this.address = address;
         this.phone = phone;
@@ -92,7 +18,7 @@ public class patient {
         this.primaryPhysician = primaryPhysician;
         this.currentMedication = currentMedication;
         this.medicationName = medicationName;
-        this.medicalHistory = medicalHistory;
+        //this.medicalHistory = medicalHistory;
         this.symptoms = symptoms;
         this.dateOfBirth = dateOfBirth;
         this.dateOfVisit = dateOfVisit;
@@ -109,11 +35,85 @@ public class patient {
 
         this.content = content;
 
-        this.tests = tests;
+       /* this.tests = tests;
         this.medications = medications;
-        this.diagnosis = diagnosis;
+        this.diagnosis = diagnosis;*/
 
     }
+
+    //tests
+    public enum Tests{
+        NUCLEICACID,
+        COAGULATIONSPANEL,
+        CREACVTIVEPROTEIN,
+        ALC,
+        XRAY,
+        CTSCAN,
+        MRI,
+        URINALYSIS,
+        STOOLCULTURES
+    }
+    ArrayList<Tests> tests = new ArrayList<Tests>();
+
+    //medications
+    public enum Medications{
+        PAIN,
+        ANTICOAGULANT,
+        ANTIRETROVIRAL,
+        BETABLOCKER,
+        INSULIN,
+        ANTIINFLAMMATORY,
+        URSODIOL,
+        CALCIUMREDUCER,
+    }
+    public ArrayList<Medications> medications = new ArrayList<Medications>();
+
+    // //diagnosis
+    public enum Diagnosis{
+        BROKENBONE,
+        HEARTATTACK,
+        LACERATION,
+        HIVAIDS,
+        LIVERFAILURE,
+        KIDNEYFAILURE,
+        DIABETES,
+        INFAMMATORYBOWLDISEASE,
+        STROKE,
+        TORNMUSCLETENDON,
+    }
+    public ArrayList<Diagnosis> diagnosis= new ArrayList<Diagnosis>();
+
+    //regForm variables
+    public String name;
+    public String address;
+    public int phone;
+    public String emergencyContactName;
+    public int emergencyContactNumber;
+    public boolean insurance;
+    public String insuranceProvider;
+    public String insuranceID;
+    public String primaryPhysician;
+    public boolean currentMedication;
+    public ArrayList<String> medicationName = new ArrayList<String>();
+    //public String[] medicalHistory;
+    public ArrayList<String> symptoms = new ArrayList<String>();
+    public String dateOfBirth;
+    public String dateOfVisit;
+
+    // patient variable
+    public int patientID;
+
+    //medForm variables
+    public float height;
+    public float weight;
+    public float temperature;
+    public String bloodPressure;
+    public String pulseRate;
+    public String assignedPhysician;
+    public boolean isAdmit;
+
+    //notes variable
+    public String content;
 
     //regForm
     //get and set Address
@@ -126,11 +126,11 @@ public class patient {
     }
 
     //get and set currentMedication
-    public Boolean getCurrentMedication() {
+    public boolean getCurrentMedication() {
         return currentMedication;
     }
 
-    public void setCurrentMedication(Boolean currentMedication) {
+    public void setCurrentMedication(boolean currentMedication) {
         this.currentMedication = currentMedication;
     }
 
@@ -139,25 +139,25 @@ public class patient {
         return insurance;
     }
 
-    public void setInsurance(Boolean insurance) {
+    public void setInsurance(boolean insurance) {
         this.insurance = insurance;
     }
 
     //get and set DOB
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
     //get and set DateOfVisit
-    public Date getDateOfVisit() {
+    public String getDateOfVisit() {
         return dateOfVisit;
     }
 
-    public void setDateOfVisit(Date dateOfVisit) {
+    public void setDateOfVisit(String dateOfVisit) {
         this.dateOfVisit = dateOfVisit;
     }
 
@@ -225,7 +225,7 @@ public class patient {
     }
 
     //get and set medicalHistory
-    public String[] getMedicalHistory() {
+   /* public String[] getMedicalHistory() {
         return medicalHistory;
     }
 
@@ -249,7 +249,7 @@ public class patient {
 
     public void setSymptoms(String[] symptoms) {
         this.symptoms = symptoms;
-    }
+    }*/
 
     //patient
     //get and set patientID
@@ -263,11 +263,11 @@ public class patient {
 
     //medForm
     //get and set admit
-    public Boolean getAdmit() {
+    public boolean getAdmit() {
         return isAdmit;
     }
 
-    public void setAdmit(Boolean admit) {
+    public void setAdmit(boolean admit) {
         isAdmit = admit;
     }
 
@@ -334,7 +334,7 @@ public class patient {
     public void setContent(String content) {
         this.content = content;
     }
-
+/*
     //Tests
     //get and set tests
     public ArrayList<Tests> getTests() {
@@ -346,12 +346,12 @@ public class patient {
     }
 
     //medications
-    //get and set medicaions
-    public ArrayList<Medicaions> getMedications() {
+    //get and set medications
+    public ArrayList<Medications> getMedications() {
         return medications;
     }
 
-    public void setMedications(ArrayList<Medicaions> medications) {
+    public void setMedications(ArrayList<Medications> medications) {
         this.medications = medications;
     }
 
@@ -363,10 +363,13 @@ public class patient {
 
     public void setDiagnosis(ArrayList<Diagnosis> diagnosis) {
         this.diagnosis = diagnosis;
-    }
+    }*/
 
     //toString to check code
     public String toString(){
-        return "The medications are " + this.medications;
+        return name + address + phone + emergencyContactName +
+                emergencyContactNumber + insurance + insuranceProvider +
+                insuranceID + primaryPhysician + currentMedication +
+                medicationName + symptoms + dateOfBirth + dateOfVisit;
     }
 }
