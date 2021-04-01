@@ -2,7 +2,6 @@ import com.mongodb.*;
 import com.mongodb.client.*;
 import java.net.UnknownHostException;
 import org.bson.Document;
-import javax.print.Doc;
 import org.bson.types.ObjectId;
 
 public class DatabaseInterface {
@@ -20,6 +19,9 @@ public class DatabaseInterface {
     public static MongoCollection<Document> collectionUser = database.getCollection("user");
     public static MongoCollection<Document> collectionPatient = database.getCollection("patient");
 
+    public static BasicDBObject whereQuery = new BasicDBObject();
+    public static FindIterable<Document> cursor;
+
     public static void main(String[] args) throws UnknownHostException{
         Document testDoc = new Document("_id", new ObjectId());
         Document testDoc2 = new Document();
@@ -28,7 +30,8 @@ public class DatabaseInterface {
     }
 
     public static void findUser(User user) {
-
+         whereQuery.put("username", user.getUsername());
+         cursor = collectionUser.find();
     }
 
     public static void savePatient(Patient patient) {
