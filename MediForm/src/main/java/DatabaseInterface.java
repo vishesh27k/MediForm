@@ -4,6 +4,8 @@ import java.net.UnknownHostException;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
+import junit.framework.Test;
+
 public class DatabaseInterface {
 
     public static ConnectionString connString = new ConnectionString(
@@ -20,18 +22,32 @@ public class DatabaseInterface {
     public static MongoCollection<Document> collectionPatient = database.getCollection("patient");
 
     public static BasicDBObject whereQuery = new BasicDBObject();
-    public static FindIterable<Document> cursor;
 
     public static void main(String[] args) throws UnknownHostException{
+        User testUser = new User("testName1", "testUsername1", "testPass1", 3);
         Document testDoc = new Document("_id", new ObjectId());
-        Document testDoc2 = new Document();
-        testDoc.append("field1", testDoc2.append("field2", "value"));
-        collectionUser.insertOne(testDoc);
+        testDoc.append("name", testUser.getName())
+            .append("username", testUser.getUsername())
+            .append("password", testUser.getPassword())
+            .append("role", testUser.getRoleID());
+
+        //collectionUser.insertOne(testDoc);
+        findUser("testUser");
     }
 
-    public static void findUser(User user) {
-         whereQuery.put("username", user.getUsername());
-         cursor = collectionUser.find();
+    public static User findUser(String username) {
+        User userReturn = new User();
+        whereQuery.put("username", username);
+        try (MongoCursor<Document> cursor = collectionUser.find(whereQuery).iterator()) {
+            while (cursor.hasNext()) {
+                Document userBuild = new Document(cursor.next());
+                    userReturn.setName(userBuild.getString("name"));
+                    userReturn.setUsername(userBuild.getString("username"));
+                    userReturn.setPassword(userBuild.getString("password"));
+                    userReturn.setRoleID(userBuild.getInteger("roleID"));
+            }
+        }
+        return userReturn;
     }
 
     public static void savePatient(Patient patient) {
