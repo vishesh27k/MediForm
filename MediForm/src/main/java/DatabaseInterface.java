@@ -24,7 +24,7 @@ public class DatabaseInterface {
     public static BasicDBObject whereQuery = new BasicDBObject();
 
     public static void main(String[] args) throws UnknownHostException{
-        User testUser = new User("testName1", "testUsername1", "testPass1", 3);
+        User testUser = new User("testName2", "testUsername2", "testPass2", 4);
         Document testDoc = new Document("_id", new ObjectId());
         testDoc.append("name", testUser.getName())
             .append("username", testUser.getUsername())
@@ -32,7 +32,9 @@ public class DatabaseInterface {
             .append("role", testUser.getRoleID());
 
         //collectionUser.insertOne(testDoc);
-        findUser("testUser");
+        testUser = findUser("testUsername");
+
+        System.out.println(testUser.getUsername());
     }
 
     public static User findUser(String username) {
@@ -41,10 +43,11 @@ public class DatabaseInterface {
         try (MongoCursor<Document> cursor = collectionUser.find(whereQuery).iterator()) {
             while (cursor.hasNext()) {
                 Document userBuild = new Document(cursor.next());
-                    userReturn.setName(userBuild.getString("name"));
-                    userReturn.setUsername(userBuild.getString("username"));
-                    userReturn.setPassword(userBuild.getString("password"));
-                    userReturn.setRoleID(userBuild.getInteger("roleID"));
+                
+                userReturn.setName(userBuild.getString("name"));
+                userReturn.setUsername(userBuild.getString("username"));
+                userReturn.setPassword(userBuild.getString("password"));
+                userReturn.setRoleID(userBuild.getInteger("role"));
             }
         }
         return userReturn;
