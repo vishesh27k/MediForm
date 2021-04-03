@@ -67,6 +67,10 @@ public class Patient {
     public Boolean stroke;
     public Boolean tornMuscleTendon;
 
+    public Patient() {
+
+    }
+
     //constructor to initiate every variable
     public void RegForm(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, Boolean insurance, String insuranceProvider,
                    String insuranceID, String primaryPhysician, Boolean currentMedication, String[] medicationName, String[] medicalHistory, String[] symptoms,
