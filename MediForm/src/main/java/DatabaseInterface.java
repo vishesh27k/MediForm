@@ -1,6 +1,8 @@
 import com.mongodb.*;
 import com.mongodb.client.*;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
+
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
@@ -24,17 +26,23 @@ public class DatabaseInterface {
     public static BasicDBObject whereQuery = new BasicDBObject();
 
     public static void main(String[] args) throws UnknownHostException{
-        User testUser = new User("testName2", "testUsername2", "testPass2", 4);
+        /*User testUser = new User("testName2", "testUsername2", "testPass2", 4);
         Document testDoc = new Document("_id", new ObjectId());
         testDoc.append("name", testUser.getName())
             .append("username", testUser.getUsername())
             .append("password", testUser.getPassword())
             .append("role", testUser.getRoleID());
 
-        //collectionUser.insertOne(testDoc);
+        collectionUser.insertOne(testDoc);
         testUser = findUser("testUsername");
 
-        System.out.println(testUser.getUsername());
+        System.out.println(testUser.getUsername());*/
+
+        ArrayList<String> testArray = new ArrayList<String>(1);
+        testArray.add("This");
+        testArray.add("Test");
+        Document testArrayDoc = new Document("notes", testArray);
+        collectionPatient.insertOne(testArrayDoc);
     }
 
     public static User findUser(String username) {
@@ -119,12 +127,14 @@ public class DatabaseInterface {
             .append("test", test)
             .append("diagnosis", diagnosis);
 
-        Document notes = new Document();
+        Document notes = new Document("notes", patient.getNotes());
 
         patientDocument.append("patientID", patient.getPatientID());
         patientDocument.append("regForm", regForm);
         patientDocument.append("medForm", medForm);
         patientDocument.append("notes", notes);
+
+        collectionPatient.insertOne(patientDocument);
     }
 
     public static void findPatient(){
