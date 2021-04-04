@@ -8,26 +8,35 @@ import java.util.ArrayList;
 
 import org.bson.Document;
 import org.bson.types.ObjectId;
+import org.bson.codecs.configuration.CodecProvider;
+import org.bson.codecs.configuration.CodecRegistry;
+import org.bson.codecs.pojo.PojoCodecProvider;
+
+import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
+import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
+import static com.mongodb.MongoClientSettings.getDefaultCodecRegistry;
 
 import junit.framework.Test;
 
 public class DatabaseInterface {
 
     public static ConnectionString connString = new ConnectionString(
-        "mongodb+srv://test-user-01:testPass01@mediform-cluster-1.t6zjg.mongodb.net/test?authSource=admin&replicaSet=atlas-2ds9so-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
-        );
+        "mongodb+srv://test-user-01:testPass01@mediform-cluster-1.t6zjg.mongodb.net/test?authSource=admin&replicaSet=atlas-2ds9so-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true");
+
+    public static CodecRegistry pojoCodecRegistry = fromProviders(PojoCodecProvider.builder().automatic(true).build());
+    public static CodecRegistry codecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(), pojoCodecRegistry);
     public static MongoClientSettings settings = MongoClientSettings.builder()
         .applyConnectionString(connString)
+        .codecRegistry(codecRegistry)
         .retryWrites(true)
         .build();
     public static MongoClient mongoClient = MongoClients.create(settings);
-
     public static MongoDatabase database = mongoClient.getDatabase("MediForm");
-    public static MongoCollection<Document> collectionUser = database.getCollection("user");
-    public static MongoCollection<Document> collectionPatient = database.getCollection("patient");
+    public static MongoCollection<User> collectionUser = database.getCollection("user", User.class);
+    public static MongoCollection<Patient> collectionPatient = database.getCollection("patient", Patient.class);
 
     public static void main(String[] args) throws UnknownHostException{
-        User testUser = new User("testName2", "testUsername2", "testPass2", 4);
+        User testUser = new User("testNamePOJO", "testUsernamePOJO", "testPassPOJO", 4);
         Document testDoc = new Document("_id", new ObjectId());
         testDoc.append("name", testUser.getName())
             .append("username", testUser.getUsername())
@@ -204,10 +213,8 @@ public class DatabaseInterface {
                 patientReturn.setPulseRate(patientBuild.getString("pulseRate"));
                 patientReturn.setAssignedPhysician(patientBuild.getString("assignedPhysician"));
                 patientReturn.setAdmit(patientBuild.getBoolean("isAdmit"));
-
             }
         }
-
         return patientReturn;
     }
 }
