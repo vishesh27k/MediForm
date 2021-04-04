@@ -1,6 +1,9 @@
 import com.mongodb.*;
 import com.mongodb.client.*;
+
+import java.lang.reflect.Array;
 import java.net.UnknownHostException;
+import java.nio.file.WatchService;
 import java.util.ArrayList;
 
 import org.bson.Document;
@@ -23,8 +26,6 @@ public class DatabaseInterface {
     public static MongoCollection<Document> collectionUser = database.getCollection("user");
     public static MongoCollection<Document> collectionPatient = database.getCollection("patient");
 
-    public static BasicDBObject whereQuery = new BasicDBObject();
-
     public static void main(String[] args) throws UnknownHostException{
         /*User testUser = new User("testName2", "testUsername2", "testPass2", 4);
         Document testDoc = new Document("_id", new ObjectId());
@@ -36,19 +37,22 @@ public class DatabaseInterface {
         collectionUser.insertOne(testDoc);
         testUser = findUser("testUsername");
 
-        System.out.println(testUser.getUsername());*/
+        System.out.println(testUser.getUsername());
 
         ArrayList<String> testArray = new ArrayList<String>(1);
         testArray.add("This");
         testArray.add("Test");
         Document testArrayDoc = new Document("notes", testArray);
-        collectionPatient.insertOne(testArrayDoc);
+        collectionPatient.insertOne(testArrayDoc);*/
     }
 
     public static User findUser(String username) {
         User userReturn = new User();
-        whereQuery.put("username", username);
-        try (MongoCursor<Document> cursor = collectionUser.find(whereQuery).iterator()) {
+
+        BasicDBObject whereUser = new BasicDBObject();
+        whereUser.put("username", username);
+
+        try (MongoCursor<Document> cursor = collectionUser.find(whereUser).iterator()) {
             while (cursor.hasNext()) {
                 Document userBuild = new Document(cursor.next());
                 
@@ -67,7 +71,7 @@ public class DatabaseInterface {
         regForm.append("name", patient.getName())
             .append("address", patient.getAddress())
             .append("phone", patient.getPhone())
-            .append("dataOfBirth", patient.getDateOfBirth())
+            .append("dateOfBirth", patient.getDateOfBirth())
             .append("emergencyContactName", patient.getEmergencyContactName())
             .append("emergencyContactNumber", patient.getEmergencyContactNumber())
             .append("insurance", patient.getInsurance())
@@ -137,7 +141,36 @@ public class DatabaseInterface {
         collectionPatient.insertOne(patientDocument);
     }
 
-    public static void findPatient(){
-        
+    public static Patient findPatient(int patientID){
+        Patient patientReturn = new Patient();
+
+        BasicDBObject wherePatient = new BasicDBObject();
+        wherePatient.put("_id", patientID);
+
+        try (MongoCursor<Document> cursor = collectionUser.find(wherePatient).iterator()) {
+            while (cursor.hasNext()) {
+                Document patientBuild = new Document();
+
+                patientReturn.setName(patientBuild.getString("name"));
+                patientReturn.setAddress(patientBuild.getString("address"));
+                patientReturn.setPhone(patientBuild.getInteger("phone"));
+                patientReturn.setDateOfBirth(patientBuild.getDate("dateOfBirth"));
+                patientReturn.setEmergencyContactName(patientBuild.getString("emergencyContactName"));
+                patientReturn.setEmergencyContactNumber(patientBuild.getInteger("emergencyContactNumber"));
+                patientReturn.setInsurance(patientBuild.getBoolean("insurance"));
+                patientReturn.setInsuranceProvider(patientBuild.getString("insuranceProvider"));
+                patientReturn.setInsuranceID(patientBuild.getString("insuranceID"));
+                patientReturn.setPrimaryPhysician(patientBuild.getString("primaryPhysician"));
+                patientReturn.setCurrentMedication(patientBuild.getBoolean("currrentMedication"));
+                patientReturn.setMedicationName(patientBuild.getList("medicationName", Class<String>));
+                patientReturn.setName(patientBuild.getString("name"));
+                patientReturn.setName(patientBuild.getString("name"));
+                patientReturn.setName(patientBuild.getString("name"));
+
+
+            }
+        }
+
+        return patientReturn;
     }
 }
