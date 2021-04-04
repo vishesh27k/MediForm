@@ -27,19 +27,19 @@ public class DatabaseInterface {
     public static MongoCollection<Document> collectionPatient = database.getCollection("patient");
 
     public static void main(String[] args) throws UnknownHostException{
-        /*User testUser = new User("testName2", "testUsername2", "testPass2", 4);
+        User testUser = new User("testName2", "testUsername2", "testPass2", 4);
         Document testDoc = new Document("_id", new ObjectId());
         testDoc.append("name", testUser.getName())
             .append("username", testUser.getUsername())
             .append("password", testUser.getPassword())
             .append("role", testUser.getRoleID());
 
-        collectionUser.insertOne(testDoc);
-        testUser = findUser("testUsername");
+        //collectionUser.insertOne(testDoc);
+        //testUser = findUser("testUsername");
 
-        System.out.println(testUser.getUsername());
+        //System.out.println(testUser.getUsername());
 
-        ArrayList<String> testArray = new ArrayList<String>(1);
+        /*ArrayList<String> testArray = new ArrayList<String>(1);
         testArray.add("This");
         testArray.add("Test");
         Document testArrayDoc = new Document("notes", testArray);
@@ -52,9 +52,9 @@ public class DatabaseInterface {
         BasicDBObject whereUser = new BasicDBObject();
         whereUser.put("username", username);
 
-        try (MongoCursor<Document> cursor = collectionUser.find(whereUser).iterator()) {
-            while (cursor.hasNext()) {
-                Document userBuild = new Document(cursor.next());
+        try (MongoCursor<Document> cursorUser = collectionUser.find(whereUser).iterator()) {
+            while (cursorUser.hasNext()) {
+                Document userBuild = new Document(cursorUser.next());
                 
                 userReturn.setName(userBuild.getString("name"));
                 userReturn.setUsername(userBuild.getString("username"));
@@ -120,7 +120,6 @@ public class DatabaseInterface {
 
         Document medForm = new Document();
         medForm.append("height", patient.getHeight())
-            .append("height", patient.getHeight())
             .append("weight", patient.getWeight())
             .append("temperature", patient.getTemperature())
             .append("bloodPressure", patient.getBloodPressure())
@@ -147,9 +146,9 @@ public class DatabaseInterface {
         BasicDBObject wherePatient = new BasicDBObject();
         wherePatient.put("_id", patientID);
 
-        try (MongoCursor<Document> cursor = collectionUser.find(wherePatient).iterator()) {
-            while (cursor.hasNext()) {
-                Document patientBuild = new Document();
+        try (MongoCursor<Document> cursorPatient = collectionUser.find(wherePatient).iterator()) {
+            while (cursorPatient.hasNext()) {
+                Document patientBuild = new Document(cursorPatient.next());
 
                 patientReturn.setName(patientBuild.getString("name"));
                 patientReturn.setAddress(patientBuild.getString("address"));
@@ -162,11 +161,49 @@ public class DatabaseInterface {
                 patientReturn.setInsuranceID(patientBuild.getString("insuranceID"));
                 patientReturn.setPrimaryPhysician(patientBuild.getString("primaryPhysician"));
                 patientReturn.setCurrentMedication(patientBuild.getBoolean("currrentMedication"));
-                patientReturn.setMedicationName(patientBuild.getList("medicationName", Class<String>));
-                patientReturn.setName(patientBuild.getString("name"));
-                patientReturn.setName(patientBuild.getString("name"));
-                patientReturn.setName(patientBuild.getString("name"));
+                patientReturn.setMedicationName(patientBuild.getString("medicationName"));
+                patientReturn.setMedicalHistory(patientBuild.getString("medicalHistory"));
+                patientReturn.setSymptoms(patientBuild.getString("symptoms"));
+                patientReturn.setDateOfVisit(patientBuild.getDate("dateOfVisit"));
 
+                patientReturn.setPain(patientBuild.getInteger("pain"));
+                patientReturn.setAnticoagulant(patientBuild.getInteger("anticoagulant"));
+                patientReturn.setAntiretroviral(patientBuild.getInteger("antiretroviral"));
+                patientReturn.setBetaBlocker(patientBuild.getInteger("betaBlocker"));
+                patientReturn.setInsulin(patientBuild.getInteger("insulin"));
+                patientReturn.setAntiInflammatory(patientBuild.getInteger("antiInflammatory"));
+                patientReturn.setUrsodiol(patientBuild.getInteger("ursodiol"));
+                patientReturn.setCalciumReducer(patientBuild.getInteger("calciumReducer"));
+
+                patientReturn.setNucleicAcid(patientBuild.getBoolean("nucleicAcid"));
+                patientReturn.setCoagulationPanel(patientBuild.getBoolean("coagulationPanel"));
+                patientReturn.setDheaSulfateSerum(patientBuild.getBoolean("dheaSulfateSerum"));
+                patientReturn.setcReactiveProtein(patientBuild.getBoolean("cReactiveProtein"));
+                patientReturn.setAlc(patientBuild.getBoolean("alc"));
+                patientReturn.setXray(patientBuild.getBoolean("xray"));
+                patientReturn.setCtScan(patientBuild.getBoolean("ctScan"));
+                patientReturn.setMri(patientBuild.getBoolean("mri"));
+                patientReturn.setUrinalysis(patientBuild.getBoolean("urinalysis"));
+                patientReturn.setStoolCultures(patientBuild.getBoolean("stoolCultures"));
+
+                patientReturn.setBrokenBone(patientBuild.getBoolean("brokenBone"));
+                patientReturn.setHeartAttack(patientBuild.getBoolean("heartAttack"));
+                patientReturn.setLaceration(patientBuild.getBoolean("laceration"));
+                patientReturn.setHivAIDS(patientBuild.getBoolean("hivAIDS"));
+                patientReturn.setLiverFailure(patientBuild.getBoolean("liverFailure"));
+                patientReturn.setKidneyFailure(patientBuild.getBoolean("kidneyFailure"));
+                patientReturn.setDiabetes(patientBuild.getBoolean("diabetes"));
+                patientReturn.setInfammatoryBowlDisease(patientBuild.getBoolean("IBD"));
+                patientReturn.setStroke(patientBuild.getBoolean("stroke"));
+                patientReturn.setTornMuscleTendon(patientBuild.getBoolean("tornMuscleTendon"));
+
+                patientReturn.setHeight(patientBuild.getDouble("height"));
+                patientReturn.setWeight(patientBuild.getDouble("weight"));
+                patientReturn.setTemperature(patientBuild.getDouble("temperature"));
+                patientReturn.setBloodPressure(patientBuild.getString("pulseRate"));
+                patientReturn.setPulseRate(patientBuild.getString("pulseRate"));
+                patientReturn.setAssignedPhysician(patientBuild.getString("assignedPhysician"));
+                patientReturn.setAdmit(patientBuild.getBoolean("isAdmit"));
 
             }
         }
