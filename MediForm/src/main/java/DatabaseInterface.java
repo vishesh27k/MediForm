@@ -38,7 +38,21 @@ public class DatabaseInterface {
     public static void main(String[] args) throws UnknownHostException{
         User testUser = new User("testNamePOJO", "testUsernamePOJO", "testPassPOJO", 4);
 
+        Object id = new ObjectId();
+        String idString = id.toString();
         Patient testPatient = new Patient();
+        testPatient.setName("testPatient");
+        testPatient.setAddress("testAddress");
+        testPatient.setPatientID(idString);
+
+        collectionUser.insertOne(testUser);
+        insertPatient(testPatient);
+        User newUser = new User(findUser("testUsernamePOJO"));
+        Patient newPatient = new Patient(findPatient(idString));
+
+        System.out.println(newUser.getPassword());
+
+        System.out.println(newPatient.getAddress());
 
         //collectionUser.insertOne(testDoc);
         //testUser = findUser("testUsername");
@@ -223,7 +237,7 @@ public class DatabaseInterface {
         Patient patientReturn = new Patient();
         
         BasicDBObject wherePatient = new BasicDBObject();
-        wherePatient.put("_id", patientID);
+        wherePatient.put("patientID", patientID);
 
         try (MongoCursor<Patient> cursorPatient = collectionPatient.find(wherePatient).iterator()) {
             while (cursorPatient.hasNext()) {
