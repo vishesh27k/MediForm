@@ -19,7 +19,7 @@ public class Patient {
     public Date dateOfVisit;
 
     // patient variable
-    public int patientID;
+    public String patientID;
 
     //medForm variables
     public float height;
@@ -135,7 +135,7 @@ public class Patient {
     //constructor to initiate every variable
     public void RegForm(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, Boolean insurance, String insuranceProvider,
                    String insuranceID, String primaryPhysician, Boolean currentMedication, String[] medicationName, String[] medicalHistory, String[] symptoms,
-                   Date dateOfBirth, Date dateOfVisit, int patientID, float height, float weight, float temperature, String bloodPressure, String pulseRate,
+                   Date dateOfBirth, Date dateOfVisit, String patientID, float height, float weight, float temperature, String bloodPressure, String pulseRate,
                    String assignedPhysician, Boolean isAdmit, String content, int pain, int anticoagulant, int antiretroviral, int betaBlocker, int insulin, int antiInflammatory,
                    int ursodiol, int calciumReducer, Boolean nucleicAcid, Boolean dheaSulfateSerum, Boolean cReactiveProtein, Boolean alc, Boolean xray, Boolean ctScan,
                    Boolean mri, Boolean urinalysis, Boolean stoolCultures, Boolean brokenBone, Boolean heartAttack, Boolean laceration, Boolean hivAIDS, Boolean liverFailure,
@@ -339,11 +339,11 @@ public class Patient {
 
     //patient
     //get and set patientID
-    public int getPatientID() {
+    public String getPatientID() {
         return patientID;
     }
 
-    public void setPatientID(int patientID) {
+    public void setPatientID(String patientID) {
         this.patientID = patientID;
     }
 
