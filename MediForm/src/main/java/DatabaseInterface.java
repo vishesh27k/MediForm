@@ -37,11 +37,8 @@ public class DatabaseInterface {
 
     public static void main(String[] args) throws UnknownHostException{
         User testUser = new User("testNamePOJO", "testUsernamePOJO", "testPassPOJO", 4);
-        Document testDoc = new Document("_id", new ObjectId());
-        testDoc.append("name", testUser.getName())
-            .append("username", testUser.getUsername())
-            .append("password", testUser.getPassword())
-            .append("role", testUser.getRoleID());
+
+        Patient testPatient = new Patient();
 
         //collectionUser.insertOne(testDoc);
         //testUser = findUser("testUsername");
@@ -55,7 +52,7 @@ public class DatabaseInterface {
         collectionPatient.insertOne(testArrayDoc);*/
     }
 
-    public static User findUser(String username) {
+    /*public static User findUser(String username) {
         User userReturn = new User();
 
         BasicDBObject whereUser = new BasicDBObject();
@@ -72,9 +69,9 @@ public class DatabaseInterface {
             }
         }
         return userReturn;
-    }
+    }*/
 
-    public static void savePatient(Patient patient) {
+    /*public static void savePatient(Patient patient) {
         Document patientDocument = new Document("_id", new ObjectId());
         Document regForm = new Document();
         regForm.append("name", patient.getName())
@@ -216,5 +213,37 @@ public class DatabaseInterface {
             }
         }
         return patientReturn;
+    }*/
+
+    public static void insertPatient(Patient patientInsert) {
+        collectionPatient.insertOne(patientInsert);
+    }
+
+    public static Patient findPatient(String patientID) {  
+        Patient patientReturn = new Patient();
+        
+        BasicDBObject wherePatient = new BasicDBObject();
+        wherePatient.put("_id", patientID);
+
+        try (MongoCursor<Patient> cursorPatient = collectionPatient.find(wherePatient).iterator()) {
+            while (cursorPatient.hasNext()) {
+                patientReturn = cursorPatient.next();
+            }
+        }
+        return patientReturn;
+    }
+
+    public static User findUser(String username) {
+        User userReturn = new User();
+
+        BasicDBObject whereUser = new BasicDBObject();
+        whereUser.put("username", username);
+
+        try (MongoCursor<User> cursorUser = collectionUser.find(whereUser).iterator()) {
+            while (cursorUser.hasNext()) {
+                userReturn = cursorUser.next();
+            }
+        }
+        return userReturn;
     }
 }
