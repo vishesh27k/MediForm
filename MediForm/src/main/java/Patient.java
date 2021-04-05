@@ -71,6 +71,67 @@ public class Patient {
 
     }
 
+    public Patient(Patient patientCopy) {
+        this.name = patientCopy.getName();
+        this.address = patientCopy.getAddress();
+        this.phone = patientCopy.getPhone();
+        this.emergencyContactName = patientCopy.getEmergencyContactName();
+        this.emergencyContactNumber = patientCopy.getEmergencyContactNumber();
+        this.insurance = patientCopy.getInsurance();
+        this.insuranceProvider = patientCopy.getInsuranceProvider();
+        this.insuranceID = patientCopy.getInsuranceID();
+        this.primaryPhysician = patientCopy.getPrimaryPhysician();
+        this.currentMedication = patientCopy.getCurrentMedication();
+        this.medicationName = patientCopy.getMedicationName();
+        this.medicalHistory = patientCopy.getMedicalHistory();
+        this.symptoms = patientCopy.getSymptoms();
+        this.dateOfBirth = patientCopy.getDateOfBirth();
+        this.dateOfVisit = patientCopy.getDateOfVisit();
+
+        this.patientID = patientCopy.getPatientID();
+
+        this.height = patientCopy.getHeight();
+        this.weight = patientCopy.getWeight();
+        this.temperature = patientCopy.getTemperature();
+        this.bloodPressure = patientCopy.getBloodPressure();
+        this.pulseRate = patientCopy.getPulseRate();
+        this.assignedPhysician = patientCopy.getAssignedPhysician();
+        this.isAdmit = patientCopy.getAdmit();
+
+        this.content = patientCopy.getContent();
+
+        this.pain = patientCopy.getPain();
+        this.anticoagulant = patientCopy.getAnticoagulant();
+        this.antiretroviral = patientCopy.getAntiretroviral();
+        this.betaBlocker = patientCopy.getBetaBlocker();
+        this.insulin = patientCopy.getInsulin();
+        this.antiInflammatory = patientCopy.getAntiInflammatory();
+        this.ursodiol = patientCopy.getUrsodiol();
+        this.calciumReducer = patientCopy.getCalciumReducer();
+
+        this.nucleicAcid = patientCopy.getNucleicAcid();
+        this.coagulationPanel = patientCopy.getCoagulationPanel();
+        this.dheaSulfateSerum = patientCopy.getDheaSulfateSerum();
+        this.cReactiveProtein = patientCopy.getcReactiveProtein();
+        this.alc = patientCopy.getAlc();
+        this.xray = patientCopy.getXray();
+        this.ctScan = patientCopy.getCtScan();
+        this.mri = patientCopy.getMri();
+        this.urinalysis = patientCopy.getUrinalysis();
+        this.stoolCultures = patientCopy.getStoolCultures();
+
+        this.brokenBone = patientCopy.getBrokenBone();
+        this.heartAttack = patientCopy.getHeartAttack();
+        this.laceration = patientCopy.getLaceration();
+        this.hivAIDS = patientCopy.getHivAIDS();
+        this.liverFailure = patientCopy.getLiverFailure();
+        this.kidneyFailure = patientCopy.getKidneyFailure();
+        this.diabetes = patientCopy.getDiabetes();
+        this.infammatoryBowlDisease = patientCopy.getInfammatoryBowlDisease();
+        this.stroke = patientCopy.getStroke();
+        this.tornMuscleTendon = patientCopy.getTornMuscleTendon();
+    }
+
     //constructor to initiate every variable
     public void RegForm(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, Boolean insurance, String insuranceProvider,
                    String insuranceID, String primaryPhysician, Boolean currentMedication, String[] medicationName, String[] medicalHistory, String[] symptoms,
