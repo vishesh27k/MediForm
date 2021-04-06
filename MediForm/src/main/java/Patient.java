@@ -1,5 +1,7 @@
 import java.util.Date;
 
+import org.bson.types.ObjectId;
+
 public class Patient {
     //regForm variables
     public String name;
@@ -19,7 +21,7 @@ public class Patient {
     public Date dateOfVisit;
 
     // patient variable
-    public String patientID;
+    public Object patientID;
 
     //medForm variables
     public float height;
@@ -68,74 +70,74 @@ public class Patient {
     public Boolean tornMuscleTendon;
 
     public Patient() {
-
+        patientID = new ObjectId();
     }
 
     public Patient(Patient patientCopy) {
-        this.name = patientCopy.getName();
-        this.address = patientCopy.getAddress();
-        this.phone = patientCopy.getPhone();
-        this.emergencyContactName = patientCopy.getEmergencyContactName();
-        this.emergencyContactNumber = patientCopy.getEmergencyContactNumber();
-        this.insurance = patientCopy.getInsurance();
-        this.insuranceProvider = patientCopy.getInsuranceProvider();
-        this.insuranceID = patientCopy.getInsuranceID();
-        this.primaryPhysician = patientCopy.getPrimaryPhysician();
-        this.currentMedication = patientCopy.getCurrentMedication();
-        this.medicationName = patientCopy.getMedicationName();
-        this.medicalHistory = patientCopy.getMedicalHistory();
-        this.symptoms = patientCopy.getSymptoms();
-        this.dateOfBirth = patientCopy.getDateOfBirth();
-        this.dateOfVisit = patientCopy.getDateOfVisit();
+        name = patientCopy.getName();
+        address = patientCopy.getAddress();
+        phone = patientCopy.getPhone();
+        emergencyContactName = patientCopy.getEmergencyContactName();
+        emergencyContactNumber = patientCopy.getEmergencyContactNumber();
+        insurance = patientCopy.getInsurance();
+        insuranceProvider = patientCopy.getInsuranceProvider();
+        insuranceID = patientCopy.getInsuranceID();
+        primaryPhysician = patientCopy.getPrimaryPhysician();
+        currentMedication = patientCopy.getCurrentMedication();
+        medicationName = patientCopy.getMedicationName();
+        medicalHistory = patientCopy.getMedicalHistory();
+        symptoms = patientCopy.getSymptoms();
+        dateOfBirth = patientCopy.getDateOfBirth();
+        dateOfVisit = patientCopy.getDateOfVisit();
 
-        this.patientID = patientCopy.getPatientID();
+        patientID = patientCopy.getPatientID();
 
-        this.height = patientCopy.getHeight();
-        this.weight = patientCopy.getWeight();
-        this.temperature = patientCopy.getTemperature();
-        this.bloodPressure = patientCopy.getBloodPressure();
-        this.pulseRate = patientCopy.getPulseRate();
-        this.assignedPhysician = patientCopy.getAssignedPhysician();
-        this.isAdmit = patientCopy.getAdmit();
+        height = patientCopy.getHeight();
+        weight = patientCopy.getWeight();
+        temperature = patientCopy.getTemperature();
+        bloodPressure = patientCopy.getBloodPressure();
+        pulseRate = patientCopy.getPulseRate();
+        assignedPhysician = patientCopy.getAssignedPhysician();
+        isAdmit = patientCopy.getAdmit();
 
-        this.content = patientCopy.getContent();
+        content = patientCopy.getContent();
 
-        this.pain = patientCopy.getPain();
-        this.anticoagulant = patientCopy.getAnticoagulant();
-        this.antiretroviral = patientCopy.getAntiretroviral();
-        this.betaBlocker = patientCopy.getBetaBlocker();
-        this.insulin = patientCopy.getInsulin();
-        this.antiInflammatory = patientCopy.getAntiInflammatory();
-        this.ursodiol = patientCopy.getUrsodiol();
-        this.calciumReducer = patientCopy.getCalciumReducer();
+        pain = patientCopy.getPain();
+        anticoagulant = patientCopy.getAnticoagulant();
+        antiretroviral = patientCopy.getAntiretroviral();
+        betaBlocker = patientCopy.getBetaBlocker();
+        insulin = patientCopy.getInsulin();
+        antiInflammatory = patientCopy.getAntiInflammatory();
+        ursodiol = patientCopy.getUrsodiol();
+        calciumReducer = patientCopy.getCalciumReducer();
 
-        this.nucleicAcid = patientCopy.getNucleicAcid();
-        this.coagulationPanel = patientCopy.getCoagulationPanel();
-        this.dheaSulfateSerum = patientCopy.getDheaSulfateSerum();
-        this.cReactiveProtein = patientCopy.getcReactiveProtein();
-        this.alc = patientCopy.getAlc();
-        this.xray = patientCopy.getXray();
-        this.ctScan = patientCopy.getCtScan();
-        this.mri = patientCopy.getMri();
-        this.urinalysis = patientCopy.getUrinalysis();
-        this.stoolCultures = patientCopy.getStoolCultures();
+        nucleicAcid = patientCopy.getNucleicAcid();
+        coagulationPanel = patientCopy.getCoagulationPanel();
+        dheaSulfateSerum = patientCopy.getDheaSulfateSerum();
+        cReactiveProtein = patientCopy.getcReactiveProtein();
+        alc = patientCopy.getAlc();
+        xray = patientCopy.getXray();
+        ctScan = patientCopy.getCtScan();
+        mri = patientCopy.getMri();
+        urinalysis = patientCopy.getUrinalysis();
+        stoolCultures = patientCopy.getStoolCultures();
 
-        this.brokenBone = patientCopy.getBrokenBone();
-        this.heartAttack = patientCopy.getHeartAttack();
-        this.laceration = patientCopy.getLaceration();
-        this.hivAIDS = patientCopy.getHivAIDS();
-        this.liverFailure = patientCopy.getLiverFailure();
-        this.kidneyFailure = patientCopy.getKidneyFailure();
-        this.diabetes = patientCopy.getDiabetes();
-        this.infammatoryBowlDisease = patientCopy.getInfammatoryBowlDisease();
-        this.stroke = patientCopy.getStroke();
-        this.tornMuscleTendon = patientCopy.getTornMuscleTendon();
+        brokenBone = patientCopy.getBrokenBone();
+        heartAttack = patientCopy.getHeartAttack();
+        laceration = patientCopy.getLaceration();
+        hivAIDS = patientCopy.getHivAIDS();
+        liverFailure = patientCopy.getLiverFailure();
+        kidneyFailure = patientCopy.getKidneyFailure();
+        diabetes = patientCopy.getDiabetes();
+        infammatoryBowlDisease = patientCopy.getInfammatoryBowlDisease();
+        stroke = patientCopy.getStroke();
+        tornMuscleTendon = patientCopy.getTornMuscleTendon();
     }
 
     //constructor to initiate every variable
     public void RegForm(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, Boolean insurance, String insuranceProvider,
                    String insuranceID, String primaryPhysician, Boolean currentMedication, String[] medicationName, String[] medicalHistory, String[] symptoms,
-                   Date dateOfBirth, Date dateOfVisit, String patientID, float height, float weight, float temperature, String bloodPressure, String pulseRate,
+                   Date dateOfBirth, Date dateOfVisit, float height, float weight, float temperature, String bloodPressure, String pulseRate,
                    String assignedPhysician, Boolean isAdmit, String content, int pain, int anticoagulant, int antiretroviral, int betaBlocker, int insulin, int antiInflammatory,
                    int ursodiol, int calciumReducer, Boolean nucleicAcid, Boolean dheaSulfateSerum, Boolean cReactiveProtein, Boolean alc, Boolean xray, Boolean ctScan,
                    Boolean mri, Boolean urinalysis, Boolean stoolCultures, Boolean brokenBone, Boolean heartAttack, Boolean laceration, Boolean hivAIDS, Boolean liverFailure,
@@ -156,7 +158,7 @@ public class Patient {
         this.dateOfBirth = dateOfBirth;
         this.dateOfVisit = dateOfVisit;
 
-        this.patientID = patientID;
+        patientID = new ObjectId();
 
         this.height = height;
         this.weight = weight;
@@ -339,7 +341,7 @@ public class Patient {
 
     //patient
     //get and set patientID
-    public String getPatientID() {
+    public Object getPatientID() {
         return patientID;
     }
 
