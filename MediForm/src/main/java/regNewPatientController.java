@@ -1,5 +1,3 @@
-package sample;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +15,8 @@ public class regNewPatientController implements Initializable {
 
     @FXML
     void toRegHome1(ActionEvent event) throws IOException {
+        
+        
         Parent regHomeParent1 = FXMLLoader.load(getClass().getResource("regHome.fxml"));
         Scene regHomeScene1 = new Scene(regHomeParent1);
 

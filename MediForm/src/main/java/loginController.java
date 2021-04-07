@@ -29,25 +29,26 @@ public class loginController implements Initializable {
         if(password.getText() != user.getPassword()) {
             //reject login and prompt to re-enter login info?
         }
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
         switch(user.getRoleID()) {
             case 0:
-                //code to send user to Reg
-                //send user OBJ to next scene
+                Parent regHomeParent = FXMLLoader.load(getClass().getResource("regHome.fxml"));
+                Scene regHomeScene = new Scene(regHomeParent);
+        
+                window.setScene(regHomeScene);
+                window.show();
                 break;
 
             default:
-                //code to send user to enterPatientID
-                //send user OBJ to next scene
+                Parent enterIDParent = FXMLLoader.load(getClass().getResource("enterID.fxml"));
+                Scene enterIDScene = new Scene(enterIDParent);
+        
+                window.setScene(enterIDScene);
+                window.show();
                 break;
         }
-        
-        Parent regHomeParent = FXMLLoader.load(getClass().getResource("enterID.fxml"));
-        Scene regHomeScene = new Scene(regHomeParent);
-
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(regHomeScene);
-        window.show();
     }
 
     @Override
