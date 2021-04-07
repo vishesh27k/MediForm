@@ -4,16 +4,6 @@ public class User {
     public String password;
     public int roleID;
 
-    public User() {
-    }
-
-    public User(User userCopy) {
-        this.name = userCopy.getName();
-        this.username = userCopy.getUsername();
-        this.password = userCopy.getPassword();
-        this.roleID = userCopy.getRoleID();
-    }
-
     public User(String name, String username, String password, int roleID) {
         this.name = name;
         this.username = username;
