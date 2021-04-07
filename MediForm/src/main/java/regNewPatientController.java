@@ -15,11 +15,12 @@ import java.text.SimpleDateFormat;
 
 public class regNewPatientController implements Initializable {
 
+
     @FXML
     private TextField firstName1;
 
     @FXML
-    private TextField lastName2;
+    private TextField lastName1;
 
     @FXML
     private TextField dateOfBirth1;
@@ -52,7 +53,13 @@ public class regNewPatientController implements Initializable {
     private TextField reasonForVisit1;
 
     @FXML
-    private TextField patientID1;
+    private TextField insuranceID1;
+
+    @FXML
+    private TextField currentMeds1;
+
+    @FXML
+    private TextField medHistory1;
 
     @FXML
     void toRegHome1(ActionEvent event) throws IOException {
@@ -61,7 +68,7 @@ public class regNewPatientController implements Initializable {
         int phone = Integer.parseInt(phoneNumber1.getText());
         int emergencyContactNumber = Integer.parseInt(emergPhoneNumber1.getText());
 
-        Patient patient = new Patient(firstname1.getText(), lastName2.getText(), address1.getText(), city1.getText(), state1.getText(), phone, emergContactName1.getText(), emergencyContactNumber, insuranceProvider1.getText(), insuranceID1.getText(), primaryPhysician1.getText(), medicationName1.getText(), medicalHistory1.getText(), reasonForVisit1.getText(), DOB, DOV);
+        Patient patient = new Patient(firstName1.getText(), lastName1.getText(), address1.getText(), city1.getText(), state1.getText(), phone, emergContactName1.getText(), emergencyContactNumber, insuranceProvider1.getText(), insuranceID1.getText(), primaryPhysician1.getText(), medicationName1.getText(), medicalHistory1.getText(), reasonForVisit1.getText(), DOB, DOV);
 
         DatabaseInterface.insertPatient(patient);
 
