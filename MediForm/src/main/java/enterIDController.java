@@ -18,15 +18,16 @@ public class enterIDController implements Initializable {
 
     @FXML
     void toNurseMenu(ActionEvent event) throws IOException {
-        Patient patient = new Patient(database.findPatient(patientID.getText()))
+        Patient patient = new Patient(DatabaseInterface.findPatient(patientID.getText()));
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
         switch(user.getRoleID()) {
             case 0:
-                Parent nurseMenuParent = FXMLLoader.load(getClass().getResource("viewRegInfo.fxml"));
-                Scene nurseMenuScene = new Scene(nurseMenuParent);
+                Parent viewRegInfoParent = FXMLLoader.load(getClass().getResource("viewRegInfo.fxml"));
+                Scene viewRegInfoScene = new Scene(viewRegInfoParent);
         
-                Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-                window.setScene(nurseMenuScene);
+                window.setScene(viewRegInfoScene);
                 window.show();
                 break;
 
@@ -34,19 +35,24 @@ public class enterIDController implements Initializable {
                 Parent nurseMenuParent = FXMLLoader.load(getClass().getResource("nurseMenu.fxml"));
                 Scene nurseMenuScene = new Scene(nurseMenuParent);
         
-                Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
                 window.setScene(nurseMenuScene);
                 window.show();
                 break;
             
             case 2:
-                //code to send user to physicanMainMenu
-                //send user and patient OBJ to next scene
+                Parent physicianMenuParent = FXMLLoader.load(getClass().getResource("physicianMenu.fxml"));
+                Scene physicianMenuScene = new Scene(physicianMenuParent);
+        
+                window.setScene(physicianMenuScene);
+                window.show();
                 break;
 
             case 3:
-                //code to send user to billing
-                //send user and patient OBJ to next scene
+                Parent billParent = FXMLLoader.load(getClass().getResource("bill.fxml"));
+                Scene billScene = new Scene(billParent);
+        
+                window.setScene(billScene);
+                window.show();
                 break;
         }
     }
