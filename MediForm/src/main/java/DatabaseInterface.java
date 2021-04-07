@@ -37,7 +37,7 @@ public class DatabaseInterface {
     public static MongoCollection<User> collectionUser = database.getCollection("user", User.class);
     public static MongoCollection<Patient> collectionPatient = database.getCollection("patient", Patient.class);
 
-    public static void main(String[] args) throws UnknownHostException{
+    /*public static void main(String[] args) throws UnknownHostException{
         User testUser = new User("testNamePOJO", "testUsernamePOJO", "testPassPOJO", 4);
 
         Object id = new ObjectId();
@@ -65,7 +65,7 @@ public class DatabaseInterface {
         testArray.add("This");
         testArray.add("Test");
         Document testArrayDoc = new Document("notes", testArray);
-        collectionPatient.insertOne(testArrayDoc);*/
+        collectionPatient.insertOne(testArrayDoc);
     }
 
     /*public static User findUser(String username) {
