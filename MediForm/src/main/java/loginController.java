@@ -23,8 +23,6 @@ public class loginController implements Initializable {
     @FXML
     void toRegHome(ActionEvent event) throws IOException {
 
-        //construct database object here
-
         User user = new User(DatabaseInterface.findUser(username.getText()));
 
         //check entered pass against database pass
