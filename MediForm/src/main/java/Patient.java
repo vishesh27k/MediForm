@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import java.util.ArrayList;
 
 public class Patient {
@@ -7,23 +8,168 @@ public class Patient {
                    String insuranceID, String primaryPhysician, boolean currentMedication, ArrayList<String> medicationName, ArrayList<String> symptoms,
                    String dateOfBirth, String dateOfVisit, float height, float weight, float temperature, String bloodPressure, String pulseRate,
                    String assignedPhysician, boolean isAdmit, String content) {
+=======
+import java.util.Date;
+import java.util.ArrayList;
+
+public class Patient {
+    //regForm variables
+    public String name;
+    public String address;
+    public int phone;
+    public String emergencyContactName;
+    public int emergencyContactNumber;
+    public String insuranceProvider;
+    public String insuranceID;
+    public String primaryPhysician;
+    public String medicationName;
+    public String medicalHistory;
+    public String symptoms;
+    public Date dateOfBirth;
+    public Date dateOfVisit;
+
+    // patient variable
+    public String patientID;
+
+    //medForm variables
+    public float height;
+    public float weight;
+    public float temperature;
+    public String bloodPressure;
+    public String pulseRate;
+    public String assignedPhysician;
+    public Boolean isAdmit;
+
+    //notes variable
+    public String content;
+    public ArrayList<String> notes = new ArrayList<String>();
+
+    //medication variable
+    public int pain;
+    public int anticoagulant;
+    public int antiretroviral;
+    public int betaBlocker;
+    public int insulin;
+    public int antiInflammatory;
+    public int ursodiol;
+    public int calciumReducer;
+
+    //test variable
+    public Boolean nucleicAcid;
+    public Boolean coagulationPanel;
+    public Boolean dheaSulfateSerum;
+    public Boolean cReactiveProtein;
+    public Boolean alc;
+    public Boolean xray;
+    public Boolean ctScan;
+    public Boolean mri;
+    public Boolean urinalysis;
+    public Boolean stoolCultures;
+
+    //diagnosis variable
+    public Boolean brokenBone;
+    public Boolean heartAttack;
+    public Boolean laceration;
+    public Boolean hivAIDS;
+    public Boolean liverFailure;
+    public Boolean kidneyFailure;
+    public Boolean diabetes;
+    public Boolean infammatoryBowlDisease;
+    public Boolean stroke;
+    public Boolean tornMuscleTendon;
+
+    public Patient() {
+    }
+
+    public Patient(Patient patientCopy) {
+        this.name = patientCopy.getName();
+        this.address = patientCopy.getAddress();
+        this.phone = patientCopy.getPhone();
+        this.emergencyContactName = patientCopy.getEmergencyContactName();
+        this.emergencyContactNumber = patientCopy.getEmergencyContactNumber();
+        this.insuranceProvider = patientCopy.getInsuranceProvider();
+        this.insuranceID = patientCopy.getInsuranceID();
+        this.primaryPhysician = patientCopy.getPrimaryPhysician();
+        this.medicationName = patientCopy.getMedicationName();
+        this.medicalHistory = patientCopy.getMedicalHistory();
+        this.symptoms = patientCopy.getSymptoms();
+        this.dateOfBirth = patientCopy.getDateOfBirth();
+        this.dateOfVisit = patientCopy.getDateOfVisit();
+
+        this.patientID = patientCopy.getPatientID();
+
+        this.height = patientCopy.getHeight();
+        this.weight = patientCopy.getWeight();
+        this.temperature = patientCopy.getTemperature();
+        this.bloodPressure = patientCopy.getBloodPressure();
+        this.pulseRate = patientCopy.getPulseRate();
+        this.assignedPhysician = patientCopy.getAssignedPhysician();
+        this.isAdmit = patientCopy.getAdmit();
+
+        this.content = patientCopy.getContent();
+
+        this.pain = patientCopy.getPain();
+        this.anticoagulant = patientCopy.getAnticoagulant();
+        this.antiretroviral = patientCopy.getAntiretroviral();
+        this.betaBlocker = patientCopy.getBetaBlocker();
+        this.insulin = patientCopy.getInsulin();
+        this.antiInflammatory = patientCopy.getAntiInflammatory();
+        this.ursodiol = patientCopy.getUrsodiol();
+        this.calciumReducer = patientCopy.getCalciumReducer();
+
+        this.nucleicAcid = patientCopy.getNucleicAcid();
+        this.coagulationPanel = patientCopy.getCoagulationPanel();
+        this.dheaSulfateSerum = patientCopy.getDheaSulfateSerum();
+        this.cReactiveProtein = patientCopy.getcReactiveProtein();
+        this.alc = patientCopy.getAlc();
+        this.xray = patientCopy.getXray();
+        this.ctScan = patientCopy.getCtScan();
+        this.mri = patientCopy.getMri();
+        this.urinalysis = patientCopy.getUrinalysis();
+        this.stoolCultures = patientCopy.getStoolCultures();
+
+        this.brokenBone = patientCopy.getBrokenBone();
+        this.heartAttack = patientCopy.getHeartAttack();
+        this.laceration = patientCopy.getLaceration();
+        this.hivAIDS = patientCopy.getHivAIDS();
+        this.liverFailure = patientCopy.getLiverFailure();
+        this.kidneyFailure = patientCopy.getKidneyFailure();
+        this.diabetes = patientCopy.getDiabetes();
+        this.infammatoryBowlDisease = patientCopy.getInfammatoryBowlDisease();
+        this.stroke = patientCopy.getStroke();
+        this.tornMuscleTendon = patientCopy.getTornMuscleTendon();
+    }
+
+    // constructor to initiate every in our regForm. Makes the patient object
+    public patient(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, String insuranceProvider,
+                   String insuranceID, String primaryPhysician, String medicationName, String medicalHistory, String symptoms, Date dateOfBirth, Date dateOfVisit) {
+>>>>>>> Stashed changes
         this.name = name;
         this.address = address;
         this.phone = phone;
         this.emergencyContactName = emergencyContactName;
         this.emergencyContactNumber = emergencyContactNumber;
-        this.insurance = insurance;
         this.insuranceProvider = insuranceProvider;
         this.insuranceID = insuranceID;
         this.primaryPhysician = primaryPhysician;
-        this.currentMedication = currentMedication;
         this.medicationName = medicationName;
         //this.medicalHistory = medicalHistory;
         this.symptoms = symptoms;
         this.dateOfBirth = dateOfBirth;
         this.dateOfVisit = dateOfVisit;
+    }
 
+<<<<<<< Updated upstream
         //this.patientID = generatePatientID;
+=======
+    // This is all the information after.
+    public patient(String patientID, float height, float weight, float temperature, String bloodPressure, String pulseRate, String assignedPhysician, Boolean isAdmit,
+                   String content, int pain, int anticoagulant, int antiretroviral, int betaBlocker, int insulin, int antiInflammatory, int ursodiol, int calciumReducer,
+                   Boolean nucleicAcid, Boolean dheaSulfateSerum, Boolean cReactiveProtein, Boolean alc, Boolean xray, Boolean ctScan, Boolean mri, Boolean urinalysis,
+                   Boolean stoolCultures, Boolean brokenBone, Boolean heartAttack, Boolean laceration, Boolean hivAIDS, Boolean liverFailure, Boolean kidneyFailure,
+                   Boolean diabetes, Boolean infammatoryBowlDisease, Boolean stroke, Boolean tornMuscleTendon, Boolean coagulationPanel){
+        this.patientID = patientID;
+>>>>>>> Stashed changes
 
         this.height = height;
         this.weight = weight;
@@ -35,6 +181,7 @@ public class Patient {
 
         this.content = content;
 
+<<<<<<< Updated upstream
        /* this.tests = tests;
         this.medications = medications;
         this.diagnosis = diagnosis;*/
@@ -114,6 +261,39 @@ public class Patient {
 
     //notes variable
     public String content;
+=======
+        this.pain = pain;
+        this.anticoagulant = anticoagulant;
+        this.antiretroviral = antiretroviral;
+        this.betaBlocker = betaBlocker;
+        this.insulin = insulin;
+        this.antiInflammatory = antiInflammatory;
+        this.ursodiol = ursodiol;
+        this.calciumReducer = calciumReducer;
+
+        this.nucleicAcid = nucleicAcid;
+        this.coagulationPanel = coagulationPanel;
+        this.dheaSulfateSerum = dheaSulfateSerum;
+        this.cReactiveProtein = cReactiveProtein;
+        this.alc = alc;
+        this.xray = xray;
+        this.ctScan = ctScan;
+        this.mri = mri;
+        this.urinalysis = urinalysis;
+        this.stoolCultures = stoolCultures;
+
+        this.brokenBone = brokenBone;
+        this.heartAttack = heartAttack;
+        this.laceration = laceration;
+        this.hivAIDS = hivAIDS;
+        this.liverFailure = liverFailure;
+        this.kidneyFailure = kidneyFailure;
+        this.diabetes = diabetes;
+        this.infammatoryBowlDisease = infammatoryBowlDisease;
+        this.stroke = stroke;
+        this.tornMuscleTendon = tornMuscleTendon;
+    }
+>>>>>>> Stashed changes
 
     //regForm
     //get and set Address
@@ -125,6 +305,7 @@ public class Patient {
         this.address = address;
     }
 
+<<<<<<< Updated upstream
     //get and set currentMedication
     public boolean getCurrentMedication() {
         return currentMedication;
@@ -143,6 +324,8 @@ public class Patient {
         this.insurance = insurance;
     }
 
+=======
+>>>>>>> Stashed changes
     //get and set DOB
     public String getDateOfBirth() {
         return dateOfBirth;
@@ -225,29 +408,33 @@ public class Patient {
     }
 
     //get and set medicalHistory
+<<<<<<< Updated upstream
    /* public String[] getMedicalHistory() {
+=======
+    public String getMedicalHistory() {
+>>>>>>> Stashed changes
         return medicalHistory;
     }
 
-    public void setMedicalHistory(String[] medicalHistory) {
+    public void setMedicalHistory(String medicalHistory) {
         this.medicalHistory = medicalHistory;
     }
 
     //get and set medicationName
-    public String[] getMedicationName() {
+    public String getMedicationName() {
         return medicationName;
     }
 
-    public void setMedicationName(String[] medicationName) {
+    public void setMedicationName(String medicationName) {
         this.medicationName = medicationName;
     }
 
     //get and set symptoms
-    public String[] getSymptoms() {
+    public String getSymptoms() {
         return symptoms;
     }
 
-    public void setSymptoms(String[] symptoms) {
+    public void setSymptoms(Stringsymptoms) {
         this.symptoms = symptoms;
     }*/
 
