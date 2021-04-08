@@ -132,6 +132,10 @@ public class Patient {
         this.tornMuscleTendon = patientCopy.getTornMuscleTendon();
     }
 
+    public Patient(String fName, String lName, String address, String city, String state, int phone, String ecName, int ecNumber, String insuranceProvider, String insuranceID, String primaryPhysician, String currentMeds, String medHistory, String symptoms, Date DOB, Date DOV) {
+        
+    }
+
     //constructor to initiate every variable
     public void RegForm(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, Boolean insurance, String insuranceProvider,
                    String insuranceID, String primaryPhysician, Boolean currentMedication, String[] medicationName, String[] medicalHistory, String[] symptoms,
