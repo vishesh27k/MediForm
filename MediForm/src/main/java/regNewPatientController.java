@@ -5,16 +5,17 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Date;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 public class regNewPatientController implements Initializable {
-
 
     @FXML
     private TextField firstName1;
@@ -64,19 +65,27 @@ public class regNewPatientController implements Initializable {
     @FXML
     void toRegHome1(ActionEvent event) throws IOException {
         
-        Date DOB = new SimpleDateFormat("dd/MM/yyyy").parse(dateOfBirth1.getText());
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        Date DOB;
+        try {
+            DOB = format.parse(dateOfBirth1.getText());
+        }
+        catch (ParseException e) {
+            DOB = null;
+        }
         int phone = Integer.parseInt(phoneNumber1.getText());
         int emergencyContactNumber = Integer.parseInt(emergPhoneNumber1.getText());
+        Date DOV = new Date();
 
-        Patient patient = new Patient(firstName1.getText(), lastName1.getText(), address1.getText(), city1.getText(), state1.getText(), phone, emergContactName1.getText(), emergencyContactNumber, insuranceProvider1.getText(), insuranceID1.getText(), primaryPhysician1.getText(), medicationName1.getText(), medicalHistory1.getText(), reasonForVisit1.getText(), DOB, DOV);
+        Patient patient = new Patient(firstName1.getText(), lastName1.getText(), address1.getText(), city1.getText(), state1.getText(), phone, emergContactName1.getText(), emergencyContactNumber, insuranceProvider1.getText(), insuranceID1.getText(), primaryPhysician1.getText(), currentMeds1.getText(), medHistory1.getText(), reasonForVisit1.getText(), DOB, DOV);
 
         DatabaseInterface.insertPatient(patient);
 
-        Parent regHomeParent1 = FXMLLoader.load(getClass().getResource("regHome.fxml"));
-        Scene regHomeScene1 = new Scene(regHomeParent1);
+        Parent regHomeParent = FXMLLoader.load(getClass().getResource("regHome.fxml"));
+        Scene regHomeScene = new Scene(regHomeParent);
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(regHomeScene1);
+        window.setScene(regHomeScene);
         window.show();
     }
 
