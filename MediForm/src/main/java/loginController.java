@@ -22,18 +22,17 @@ public class loginController implements Initializable {
 
     @FXML
     void toRegHome(ActionEvent event) throws IOException {
-
-        User user = new User(DatabaseInterface.findUser(username.getText()));
+        Main.user = DatabaseInterface.findUser(username.getText());
 
         //check entered pass against database pass
-        if(password.getText() != user.getPassword()) {
+        if(password.getText() != Main.user.getPassword()) {
             //reject login and prompt to re-enter login info?
         }
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
-        switch(user.getRoleID()) {
-            case 0:
+        switch(Main.user.getRoleID()) {
+            case 0:              
                 Parent regHomeParent = FXMLLoader.load(getClass().getResource("regHome.fxml"));
                 Scene regHomeScene = new Scene(regHomeParent);
         
