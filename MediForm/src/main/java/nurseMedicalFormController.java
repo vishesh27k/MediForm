@@ -1,5 +1,3 @@
-package sample;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +11,19 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class nurseMedicalFormController{
-    String patientName = patient.getName();
+public class nurseMedicalFormController implements Initializable{
+    @FXML
+    void toSubmit(ActionEvent event) throws IOException {
+        Parent regNewPatientParent = FXMLLoader.load(getClass().getResource("regNewPatient.fxml"));
+        Scene regNewPatientScene = new Scene(regNewPatientParent);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(regNewPatientScene);
+        window.show();
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 }

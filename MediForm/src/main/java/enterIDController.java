@@ -18,11 +18,11 @@ public class enterIDController implements Initializable {
 
     @FXML
     void toNurseMenu(ActionEvent event) throws IOException {
-        Patient patient = new Patient(DatabaseInterface.findPatient(patientID.getText()));
+        Main.patient = DatabaseInterface.findPatient(patientID.getText());
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
-        switch(user.getRoleID()) {
+        switch(Main.user.getRoleID()) {
             case 0:
                 Parent viewRegInfoParent = FXMLLoader.load(getClass().getResource("viewRegInfo.fxml"));
                 Scene viewRegInfoScene = new Scene(viewRegInfoParent);

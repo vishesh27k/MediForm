@@ -1,5 +1,3 @@
-package sample;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,6 +22,15 @@ public class nurseMenuController implements Initializable {
         window.show();
     }
 
+    @FXML
+    void toNotes(ActionEvent event) throws IOException {
+        Parent notesParent = FXMLLoader.load(getClass().getResource("notes.fxml"));
+        Scene notesScene = new Scene(notesParent);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(notesScene);
+        window.show();
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
