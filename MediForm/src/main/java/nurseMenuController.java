@@ -13,6 +13,16 @@ import java.util.ResourceBundle;
 
 public class nurseMenuController implements Initializable {
     @FXML
+    void toEnterVitals(ActionEvent event) throws IOException {
+        Parent enterVitalsParent = FXMLLoader.load(getClass().getResource("enterVitals.fxml"));
+        Scene enterVitalsScene = new Scene(enterVitalsParent);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(enterVitalsScene);
+        window.show();
+    }
+
+    @FXML
     void toNurseMedicalForm(ActionEvent event) throws IOException {
         Parent nurseMedFormParent = FXMLLoader.load(getClass().getResource("nurseMedicalForm.fxml"));
         Scene nurseMedFormScene = new Scene(nurseMedFormParent);
