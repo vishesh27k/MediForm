@@ -21,7 +21,7 @@ public class loginController implements Initializable {
     private TextField username;
 
     @FXML
-    void toRegHome(ActionEvent event) throws IOException {
+    void loginUser(ActionEvent event) throws IOException {
         Main.user = DatabaseInterface.findUser(username.getText());
 
         //check entered pass against database pass

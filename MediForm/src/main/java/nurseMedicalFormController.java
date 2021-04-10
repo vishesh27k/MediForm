@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
 
 public class nurseMedicalFormController implements Initializable{
     @FXML
-    void toSubmit(ActionEvent event) throws IOException {
+    void toNurseMenu(ActionEvent event) throws IOException {
         Parent regNewPatientParent = FXMLLoader.load(getClass().getResource("regNewPatient.fxml"));
         Scene regNewPatientScene = new Scene(regNewPatientParent);
 
