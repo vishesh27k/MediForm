@@ -77,9 +77,9 @@ public class regNewPatientController implements Initializable {
         int emergencyContactNumber = Integer.parseInt(emergPhoneNumber1.getText());
         Date DOV = new Date();
 
-        Patient patient = new Patient(firstName1.getText(), lastName1.getText(), address1.getText(), city1.getText(), state1.getText(), phone, emergContactName1.getText(), emergencyContactNumber, insuranceProvider1.getText(), insuranceID1.getText(), primaryPhysician1.getText(), currentMeds1.getText(), medHistory1.getText(), reasonForVisit1.getText(), DOB, DOV);
+        Patient patientInsert = new Patient(firstName1.getText(), lastName1.getText(), address1.getText(), city1.getText(), state1.getText(), phone, emergContactName1.getText(), emergencyContactNumber, insuranceProvider1.getText(), insuranceID1.getText(), primaryPhysician1.getText(), currentMeds1.getText(), medHistory1.getText(), reasonForVisit1.getText(), DOB, DOV);
 
-        DatabaseInterface.insertPatient(patient);
+        DatabaseInterface.insertPatient(patientInsert);
 
         Parent regHomeParent = FXMLLoader.load(getClass().getResource("regHome.fxml"));
         Scene regHomeScene = new Scene(regHomeParent);
