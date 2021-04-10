@@ -15,6 +15,16 @@ import java.util.ResourceBundle;
 
 public class viewRegFormController implements Initializable{
     
+    @FXML
+    void toRegHome(ActionEvent event) throws IOException {
+        Parent regHomeParent = FXMLLoader.load(getClass().getResource("regHome.fxml"));
+        Scene regHomeScene = new Scene(regHomeParent);
+        
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(regHomeScene);
+        window.show();
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

@@ -23,6 +23,16 @@ public class regHomeController implements Initializable{
         window.show();
     }
 
+    @FXML
+    void toEnterId(ActionEvent event) throws IOException {
+        Parent enterIDParent = FXMLLoader.load(getClass().getResource("enterID.fxml"));
+        Scene enterIDScene = new Scene(enterIDParent);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(enterIDScene);
+        window.show();
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
