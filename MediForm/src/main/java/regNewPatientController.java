@@ -63,7 +63,7 @@ public class regNewPatientController implements Initializable {
     private TextField medHistory1;
 
     @FXML
-    void toRegHome1(ActionEvent event) throws IOException {
+    void submitRegForm(ActionEvent event) throws IOException {
         
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         Date DOB;

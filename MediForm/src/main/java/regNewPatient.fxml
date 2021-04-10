@@ -37,7 +37,7 @@
       <TextField fx:id="emergContactName1" layoutX="197.0" layoutY="298.0" />
       <TextField fx:id="emergPhoneNumber1" layoutX="204.0" layoutY="327.0" />
       <TextField fx:id="reasonForVisit1" layoutX="203.0" layoutY="357.0" prefHeight="26.0" prefWidth="150.0" />
-      <Button layoutX="520.0" layoutY="358.0" mnemonicParsing="false" onAction="#toRegHome1" text="Submit" />
+      <Button layoutX="520.0" layoutY="358.0" mnemonicParsing="false" onAction="#submitRegForm" text="Submit" />
       <Label layoutX="363.0" layoutY="138.0" text="Insurance ID:" />
       <TextField fx:id="insuranceID1" layoutX="369.0" layoutY="160.0" prefHeight="26.0" prefWidth="222.0" />
       <Label layoutX="363.0" layoutY="200.0" text="Current Medication(s):" />
