@@ -22,6 +22,36 @@ public class physicianMedicalFormController implements Initializable{
         window.show();
     }
 
+    @FXML
+    void toDiagnose(ActionEvent event) throws IOException {
+        Parent diagnoseParent = FXMLLoader.load(getClass().getResource("diagnose.fxml"));
+        Scene diagnoseScene = new Scene(diagnoseParent);
+        
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(diagnoseScene);
+        window.show();
+    }
+    
+    @FXML
+    void toOrderMeds(ActionEvent event) throws IOException {
+        Parent orderMedsParent = FXMLLoader.load(getClass().getResource("orderMeds.fxml"));
+        Scene orderMedsScene = new Scene(orderMedsParent);
+        
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(orderMedsScene);
+        window.show();
+    }
+
+    @FXML
+    void toOrderTest(ActionEvent event) throws IOException {
+        Parent orderTestParent = FXMLLoader.load(getClass().getResource("orderTest.fxml"));
+        Scene orderTestScene = new Scene(orderTestParent);
+        
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(orderTestScene);
+        window.show();
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
