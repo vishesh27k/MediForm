@@ -9,6 +9,9 @@ import java.util.ArrayList;
 
 import org.bson.Document;
 import org.bson.types.ObjectId;
+
+import groovy.transform.ToString;
+
 import org.bson.codecs.configuration.CodecProvider;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
@@ -56,7 +59,8 @@ public class DatabaseInterface {
     }
 
     public static void updatePatient(Patient patientUpdate) {
-        Bson filter = Filters.eq("patientID", patientUpdate.getPatientID());
+        String id = patientUpdate.getPatientID();
+        Bson filter = Filters.eq("patientID", id);
         collectionPatient.replaceOne(filter, patientUpdate);
     }
 
