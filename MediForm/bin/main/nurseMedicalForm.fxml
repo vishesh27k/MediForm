@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane>
@@ -24,8 +23,8 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField layoutX="164.0" layoutY="64.0" />
-            <TextField layoutX="165.0" layoutY="91.0" />
+            <TextField fx:id="firstName1" layoutX="164.0" layoutY="64.0" />
+            <TextField fx:id="lastName1" layoutX="165.0" layoutY="91.0" />
             <Label layoutX="94.0" layoutY="163.0" text="Height:" />
             <Label layoutX="272.0" layoutY="163.0" text="Weight:" />
             <Label layoutX="76.0" layoutY="200.0" text="Temperature: " />
@@ -34,17 +33,14 @@
             <Label layoutX="108.0" layoutY="267.0" text="Medications:" />
             <Label layoutX="127.0" layoutY="296.0" text="Tests:" />
             <Label layoutX="114.0" layoutY="324.0" text="Diagnosis:" />
-            <TextField layoutX="157.0" layoutY="158.0" prefHeight="26.0" prefWidth="67.0" />
-            <TextField layoutX="153.0" layoutY="196.0" prefHeight="26.0" prefWidth="74.0" />
-            <TextField layoutX="334.0" layoutY="159.0" prefHeight="26.0" prefWidth="82.0" />
-            <TextField layoutX="342.0" layoutY="196.0" prefHeight="26.0" prefWidth="74.0" />
-            <TextField layoutX="153.0" layoutY="229.0" prefHeight="26.0" prefWidth="272.0" />
-            <TextField layoutX="185.0" layoutY="263.0" prefHeight="26.0" prefWidth="202.0" />
-            <TextField layoutX="185.0" layoutY="292.0" prefHeight="26.0" prefWidth="202.0" />
-            <TextField layoutX="185.0" layoutY="320.0" prefHeight="26.0" prefWidth="202.0" />
-            <Button layoutX="399.0" layoutY="264.0" mnemonicParsing="false" text="Order Meds" />
-            <Button layoutX="399.0" layoutY="292.0" mnemonicParsing="false" text="Order Test" />
-            <Button layoutX="399.0" layoutY="320.0" mnemonicParsing="false" text="Diagnose" />
+            <TextField fx:id="height1" layoutX="157.0" layoutY="158.0" prefHeight="26.0" prefWidth="67.0" />
+            <TextField fx:id="temp1" layoutX="153.0" layoutY="196.0" prefHeight="26.0" prefWidth="74.0" />
+            <TextField fx:id="weight1" layoutX="334.0" layoutY="159.0" prefHeight="26.0" prefWidth="82.0" />
+            <TextField fx:id="bloodPress1" layoutX="342.0" layoutY="196.0" prefHeight="26.0" prefWidth="74.0" />
+            <TextField fx:id="symptoms1" layoutX="153.0" layoutY="229.0" prefHeight="26.0" prefWidth="272.0" />
+            <TextField fx:id="medications1" layoutX="185.0" layoutY="263.0" prefHeight="26.0" prefWidth="202.0" />
+            <TextField fx:id="tests1" layoutX="185.0" layoutY="292.0" prefHeight="26.0" prefWidth="202.0" />
+            <TextField fx:id="diagnosis1" layoutX="185.0" layoutY="320.0" prefHeight="26.0" prefWidth="202.0" />
             <Button layoutX="31.0" layoutY="346.0" mnemonicParsing="false" text="Back" />
             <Button layoutX="502.0" layoutY="346.0" mnemonicParsing="false" text="Submit" />
          </children>
