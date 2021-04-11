@@ -2,6 +2,7 @@
 
 import com.mongodb.*;
 import com.mongodb.client.*;
+import com.mongodb.client.model.Filters;
 
 import java.lang.reflect.Array;
 import java.net.UnknownHostException;
@@ -13,6 +14,7 @@ import org.bson.types.ObjectId;
 import org.bson.codecs.configuration.CodecProvider;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
+import org.bson.conversions.Bson;
 
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
@@ -247,6 +249,11 @@ public class DatabaseInterface {
             }
         }
         return patientReturn;
+    }
+
+    public static void updatePatient(Patient patientUpdate) {
+        Bson filter = Filters.eq("patientID", patientUpdate.getPatientID());
+        collectionPatient.replaceOne(filter, patientUpdate);
     }
 
     public static User findUser(String username) {
