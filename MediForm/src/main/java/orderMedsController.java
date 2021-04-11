@@ -39,7 +39,7 @@ public class orderMedsController implements Initializable{
     @FXML
     private TextField calciumReducer;
 
-    
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
