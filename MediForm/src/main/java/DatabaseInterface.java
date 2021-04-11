@@ -18,7 +18,7 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static com.mongodb.MongoClientSettings.getDefaultCodecRegistry;
 
-import junit.framework.Test;
+//import junit.framework.Test;
 
 public class DatabaseInterface {
 
