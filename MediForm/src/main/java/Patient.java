@@ -1,5 +1,3 @@
-import java.util.Date;
-
 import org.bson.types.ObjectId;
 
 public class Patient {
@@ -8,17 +6,18 @@ public class Patient {
     public String address;
     public String city;
     public String state;
-    public int phone;
+    public String phone;
     public String emergencyContactName;
-    public int emergencyContactNumber;
+    public String emergencyContactNumber;
     public String insuranceProvider;
     public String insuranceID;
     public String primaryPhysician;
     public String medicationName;
     public String medicalHistory;
     public String symptoms;
-    public Date dateOfBirth;
-    public Date dateOfVisit;
+    public String dateOfBirth;
+    public String dateOfVisit;
+
 
     // patient variable
     public String patientID;
@@ -134,7 +133,7 @@ public class Patient {
     }
 
     //constructor to initiate every variable in regform. This makes the patient object
-    public Patient(String fName, String lName, String address, String city, String state, int phone, String emergencyContactName, int emergencyContactNumber, String insuranceProvider, String insuranceID, String primaryPhysician, String medicationName, String medicalHistory, String symptoms, Date dateOfBirth, Date dateOfVisit) {
+    public Patient(String fName, String lName, String address, String city, String state, String phone, String emergencyContactName, String emergencyContactNumber, String insuranceProvider, String insuranceID, String primaryPhysician, String medicationName, String medicalHistory, String symptoms, String dateOfBirth, String dateOfVisit) {
         this.name = fName + " " + lName;
         this.address = address;
         this.city = city;
@@ -223,38 +222,38 @@ public class Patient {
     }
 
     //get and set DOB
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
     //get and set DateOfVisit
-    public Date getDateOfVisit() {
+    public String getDateOfVisit() {
         return dateOfVisit;
     }
 
-    public void setDateOfVisit(Date dateOfVisit) {
+    public void setDateOfVisit(String dateOfVisit) {
         this.dateOfVisit = dateOfVisit;
     }
 
     //Get and set EmergencyContactNumber
-    public int getEmergencyContactNumber() {
+    public String getEmergencyContactNumber() {
         return emergencyContactNumber;
     }
 
-    public void setEmergencyContactNumber(int emergencyContactNumber) {
+    public void setEmergencyContactNumber(String emergencyContactNumber) {
         this.emergencyContactNumber = emergencyContactNumber;
     }
 
     //get and set Phone
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
