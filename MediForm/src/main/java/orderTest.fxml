@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="orderTestController">
    <children>
       <Label layoutX="244.0" layoutY="35.0" text="Order Test">
@@ -14,16 +13,16 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <CheckBox layoutX="173.0" layoutY="77.0" mnemonicParsing="false" text="Nucleic Acid" />
-      <CheckBox layoutX="309.0" layoutY="105.0" mnemonicParsing="false" text="Coagulation Panel" />
-      <CheckBox layoutX="165.0" layoutY="144.0" mnemonicParsing="false" text="DHEA Sulfate Serum" />
-      <CheckBox layoutX="309.0" layoutY="170.0" mnemonicParsing="false" text="C Reactive Protein" />
-      <CheckBox layoutX="168.0" layoutY="215.0" mnemonicParsing="false" text="ALC" />
-      <CheckBox layoutX="168.0" layoutY="259.0" mnemonicParsing="false" text="X-Ray" />
-      <CheckBox layoutX="311.0" layoutY="277.0" mnemonicParsing="false" text="MRI" />
-      <CheckBox layoutX="162.0" layoutY="313.0" mnemonicParsing="false" text="CT Scan" />
-      <CheckBox layoutX="311.0" layoutY="340.0" mnemonicParsing="false" text="Urinalysis" />
-      <CheckBox layoutX="309.0" layoutY="224.0" mnemonicParsing="false" text="Stool Culture" />
+      <CheckBox fx:id="nucleicAcid" layoutX="173.0" layoutY="77.0" mnemonicParsing="false" text="Nucleic Acid" />
+      <CheckBox fx:id="coagulationPanel" layoutX="309.0" layoutY="105.0" mnemonicParsing="false" text="Coagulation Panel" />
+      <CheckBox fx:id="dheaSulfateSerum" layoutX="165.0" layoutY="144.0" mnemonicParsing="false" text="DHEA Sulfate Serum" />
+      <CheckBox fx:id="cReactiveProtein" layoutX="309.0" layoutY="170.0" mnemonicParsing="false" text="C Reactive Protein" />
+      <CheckBox fx:id="alc" layoutX="168.0" layoutY="215.0" mnemonicParsing="false" text="ALC" />
+      <CheckBox layoutX="168.0" layoutY="259.0" mnemonicParsing="false" text="X-Ray" fx:id="xRay" />
+      <CheckBox fx:id="mri" layoutX="311.0" layoutY="277.0" mnemonicParsing="false" text="MRI" />
+      <CheckBox fx:id="ctScan" layoutX="162.0" layoutY="313.0" mnemonicParsing="false" text="CT Scan" />
+      <CheckBox fx:id="urinalysis" layoutX="311.0" layoutY="340.0" mnemonicParsing="false" text="Urinalysis" />
+      <CheckBox fx:id="stoolCulture" layoutX="309.0" layoutY="224.0" mnemonicParsing="false" text="Stool Culture" />
       <Button layoutX="491.0" layoutY="345.0" mnemonicParsing="false" text="Order" />
    </children>
 </AnchorPane>
