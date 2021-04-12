@@ -24,7 +24,7 @@ import static com.mongodb.MongoClientSettings.getDefaultCodecRegistry;
 import junit.framework.Test;
 
 public class DatabaseInterface {
-
+    
     public static ConnectionString connString = new ConnectionString(
         "mongodb+srv://test-user-01:testPass01@mediform-cluster-1.t6zjg.mongodb.net/test?authSource=admin&replicaSet=atlas-2ds9so-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true");
 

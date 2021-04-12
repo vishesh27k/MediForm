@@ -407,12 +407,12 @@ public class Patient {
     }
 
     //notes
-    //get and set content
+    //get and set notes
     public ArrayList<String> getNotes() {
         return notes;
     }
 
-    public void setContent(String content) {
+    public void setNotes(String content) {
         notes.add(content);
     }
 
