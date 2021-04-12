@@ -33,6 +33,16 @@ public class regHomeController implements Initializable{
         window.show();
     }
 
+    @FXML
+    void logout(ActionEvent event) throws IOException {
+        Parent logout = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Scene logout1 = new Scene(logout);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(logout1);
+        window.show();
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
