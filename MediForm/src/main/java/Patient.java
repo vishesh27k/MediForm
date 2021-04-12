@@ -1,17 +1,20 @@
 import java.util.Date;
+
+import org.bson.types.ObjectId;
+
 import java.util.ArrayList;
 
-public class patient {
+public class Patient {
     //regForm variables
-    public String fName;
-    public String lName;
-    public String name = fName + " " + lName;
+    public String name;
     public String address;
+    public String city;
+    public String state;
     public int phone;
     public String emergencyContactName;
     public int emergencyContactNumber;
     public String insuranceProvider;
-    public String insuranceID:
+    public String insuranceID;
     public String primaryPhysician;
     public String medicationName;
     public String medicalHistory;
@@ -20,7 +23,7 @@ public class patient {
     public Date dateOfVisit;
 
     // patient variable
-    public int patientID;
+    public String patientID;
 
     //medForm variables
     public float height;
@@ -32,7 +35,6 @@ public class patient {
     public Boolean isAdmit;
 
     //notes variable
-    public String content;
     public ArrayList<String> notes = new ArrayList<String>();
 
     //medication variable
@@ -70,7 +72,8 @@ public class patient {
     public Boolean tornMuscleTendon;
 
     public Patient() {
-
+        Object id = new ObjectId();
+        patientID = id.toString();
     }
 
     public Patient(Patient patientCopy) {
@@ -79,11 +82,9 @@ public class patient {
         this.phone = patientCopy.getPhone();
         this.emergencyContactName = patientCopy.getEmergencyContactName();
         this.emergencyContactNumber = patientCopy.getEmergencyContactNumber();
-        this.insurance = patientCopy.getInsurance();
         this.insuranceProvider = patientCopy.getInsuranceProvider();
         this.insuranceID = patientCopy.getInsuranceID();
         this.primaryPhysician = patientCopy.getPrimaryPhysician();
-        this.currentMedication = patientCopy.getCurrentMedication();
         this.medicationName = patientCopy.getMedicationName();
         this.medicalHistory = patientCopy.getMedicalHistory();
         this.symptoms = patientCopy.getSymptoms();
@@ -100,7 +101,7 @@ public class patient {
         this.assignedPhysician = patientCopy.getAssignedPhysician();
         this.isAdmit = patientCopy.getAdmit();
 
-        this.content = patientCopy.getContent();
+        this.notes = patientCopy.getNotes();
 
         this.pain = patientCopy.getPain();
         this.anticoagulant = patientCopy.getAnticoagulant();
@@ -135,12 +136,11 @@ public class patient {
     }
 
     //constructor to initiate every variable in regform. This makes the patient object
-    public Patient(String fName, String lName String address, int phone, String emergencyContactName, int emergencyContactNumber, String insuranceProvider,
-                   String insuranceID, String primaryPhysician, String medicationName, String medicalHistory, String symptoms,
-                   Date dateOfBirth, Date dateOfVisit;) {
-        this.fName = fName;
-        this.lName = lName
+    public Patient(String fName, String lName, String address, String city, String state, int phone, String emergencyContactName, int emergencyContactNumber, String insuranceProvider, String insuranceID, String primaryPhysician, String medicationName, String medicalHistory, String symptoms, Date dateOfBirth, Date dateOfVisit) {
+        this.name = fName + " " + lName;
         this.address = address;
+        this.city = city;
+        this.state = state;
         this.phone = phone;
         this.emergencyContactName = emergencyContactName;
         this.emergencyContactNumber = emergencyContactNumber;
@@ -155,13 +155,7 @@ public class patient {
     }
 
     // this is all the information after.
-    public patient(int patientID, float height, float weight, float temperature, String bloodPressure, String pulseRate,
-                   String assignedPhysician, Boolean isAdmit, String content, int pain, int anticoagulant, int antiretroviral, int betaBlocker, int insulin, int antiInflammatory,
-                   int ursodiol, int calciumReducer, Boolean nucleicAcid, Boolean dheaSulfateSerum, Boolean cReactiveProtein, Boolean alc, Boolean xray, Boolean ctScan,
-                   Boolean mri, Boolean urinalysis, Boolean stoolCultures, Boolean brokenBone, Boolean heartAttack, Boolean laceration, Boolean hivAIDS, Boolean liverFailure,
-                   Boolean kidneyFailure, Boolean diabetes, Boolean infammatoryBowlDisease, Boolean stroke, Boolean tornMuscleTendon, Boolean coagulationPanel){
-        this.patientID = patientID;
-
+    public Patient(float height, float weight, float temperature, String bloodPressure, String pulseRate, String assignedPhysician, Boolean isAdmit, int pain, int anticoagulant, int antiretroviral, int betaBlocker, int insulin, int antiInflammatory, int ursodiol, int calciumReducer, Boolean nucleicAcid, Boolean dheaSulfateSerum, Boolean cReactiveProtein, Boolean alc, Boolean xray, Boolean ctScan, Boolean mri, Boolean urinalysis, Boolean stoolCultures, Boolean brokenBone, Boolean heartAttack, Boolean laceration, Boolean hivAIDS, Boolean liverFailure, Boolean kidneyFailure, Boolean diabetes, Boolean infammatoryBowlDisease, Boolean stroke, Boolean tornMuscleTendon, Boolean coagulationPanel) {
         this.height = height;
         this.weight = weight;
         this.temperature = temperature;
@@ -169,8 +163,6 @@ public class patient {
         this.pulseRate = pulseRate;
         this.assignedPhysician = assignedPhysician;
         this.isAdmit = isAdmit;
-
-        this.content = content;
 
         this.pain = pain;
         this.anticoagulant = anticoagulant;
@@ -212,6 +204,24 @@ public class patient {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+    
+    //get and set City
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    //get and set State
+    public String getState() {
+        return city;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
     //get and set DOB
@@ -324,11 +334,11 @@ public class patient {
 
     //patient
     //get and set patientID
-    public int getPatientID() {
+    public String getPatientID() {
         return patientID;
     }
 
-    public void setPatientID(int patientID) {
+    public void setPatientID(String patientID) {
         this.patientID = patientID;
     }
 
@@ -398,12 +408,12 @@ public class patient {
 
     //notes
     //get and set content
-    public String getContent() {
-        return content;
+    public ArrayList<String> getNotes() {
+        return notes;
     }
 
     public void setContent(String content) {
-        this.content = content;
+        notes.add(content);
     }
 
     //medication
