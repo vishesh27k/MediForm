@@ -15,8 +15,8 @@
             <Button layoutX="232.0" layoutY="252.0" mnemonicParsing="false" onAction="#loginUser" prefHeight="26.0" prefWidth="135.0" text="LOGIN" />
             <Label layoutX="136.0" layoutY="161.0" text="Username: " />
             <Label layoutX="139.0" layoutY="200.0" text="Password:" />
-            <PasswordField id="password" layoutX="225.0" layoutY="196.0" />
-            <TextField id="username" layoutX="225.0" layoutY="157.0" />
+            <PasswordField id="password" fx:id="password" layoutX="225.0" layoutY="196.0" />
+            <TextField id="username" fx:id="username" layoutX="225.0" layoutY="157.0" />
             <Label layoutX="229.0" layoutY="90.0" text="MEDIFORM" textFill="#4f7ef2">
                <font>
                   <Font name="Times New Roman Bold" size="24.0" />
