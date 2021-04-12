@@ -63,6 +63,12 @@ public class regNewPatientController implements Initializable {
     private TextField medHistory1;
 
     @FXML
+    private TextField dateOfVisit1;
+
+    @FXML
+    private TextField patientID1;
+
+    @FXML
     void submitRegForm(ActionEvent event) throws IOException {
         
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
