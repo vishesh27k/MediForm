@@ -1,10 +1,11 @@
 import java.util.ArrayList;
+import java.util.Date;
 
 public class patient {
     //regForm variables
     public String fName;
     public String lName;
-    public String name = fName + " " + lName;
+    public String name;
     public String address;
     public int phone;
     public String emergencyContactName;
@@ -67,6 +68,12 @@ public class patient {
     public Boolean infammatoryBowlDisease;
     public Boolean stroke;
     public Boolean tornMuscleTendon;
+
+    //billing variable
+    public int priceTest;
+    public int priceMed;
+    public int nightsStayed;
+    public float totalCost;
 
     public Patient() {
 
@@ -155,7 +162,7 @@ public class patient {
 
     // this is all the information after.
     public patient(int patientID, float height, float weight, float temperature, String bloodPressure, String pulseRate,
-                   String assignedPhysician, Boolean isAdmit, String content, int pain, int anticoagulant, int antiretroviral, int betaBlocker, int insulin, int antiInflammatory,
+                   String assignedPhysician, Boolean isAdmit, ArrayList<String> notes, int pain, int anticoagulant, int antiretroviral, int betaBlocker, int insulin, int antiInflammatory,
                    int ursodiol, int calciumReducer, Boolean nucleicAcid, Boolean dheaSulfateSerum, Boolean cReactiveProtein, Boolean alc, Boolean xray, Boolean ctScan,
                    Boolean mri, Boolean urinalysis, Boolean stoolCultures, Boolean brokenBone, Boolean heartAttack, Boolean laceration, Boolean hivAIDS, Boolean liverFailure,
                    Boolean kidneyFailure, Boolean diabetes, Boolean infammatoryBowlDisease, Boolean stroke, Boolean tornMuscleTendon, Boolean coagulationPanel){
@@ -169,7 +176,7 @@ public class patient {
         this.assignedPhysician = assignedPhysician;
         this.isAdmit = isAdmit;
 
-        this.content = content;
+        this.notes = notes;
 
         this.pain = pain;
         this.anticoagulant = anticoagulant;
@@ -276,13 +283,29 @@ public class patient {
         this.insuranceProvider = insuranceProvider;
     }
 
+    public String getfName() {
+        return fName;
+    }
+
+    public String getlName() {
+        return lName;
+    }
+
+    public void setfName(String fName) {
+        this.fName = fName;
+    }
+
+    public void setlName(String lName) {
+        this.lName = lName;
+    }
+
     //get and set name
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String fName, String lName) {
+        this.name = fName + " " + lName;
     }
 
     //get and set primary Physician
@@ -405,6 +428,14 @@ public class patient {
         this.content = content;
     }
 
+    public ArrayList<String> getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String note) {
+        notes.add(note);
+    }
+
     //medication
     //get and set pain
     public int getPain() {
@@ -421,7 +452,7 @@ public class patient {
     }
 
     public void setAnticoagulant(int anticoagulant) {
-        this.anticoagulant = anticoagulant;
+        this.anticoagulant = anticoagulant * 2;
     }
 
     //get and set antiretroviral
@@ -439,7 +470,7 @@ public class patient {
     }
 
     public void setBetaBlocker(int betaBlocker) {
-        this.betaBlocker = betaBlocker;
+        this.betaBlocker = betaBlocker * 3;
     }
 
     //get and set insulin
@@ -448,7 +479,7 @@ public class patient {
     }
 
     public void setInsulin(int insulin) {
-        this.insulin = insulin;
+        this.insulin = insulin * 4;
     }
 
     //get and set antiInflammartory
@@ -457,7 +488,7 @@ public class patient {
     }
 
     public void setAntiInflammatory(int antiInflammatory) {
-        this.antiInflammatory = antiInflammatory;
+        this.antiInflammatory = antiInflammatory * 5;
     }
 
     //get and set ursodial
@@ -466,7 +497,7 @@ public class patient {
     }
 
     public void setUrsodiol(int ursodiol) {
-        this.ursodiol = ursodiol;
+        this.ursodiol = ursodiol * 6;
     }
 
     //get and set calciumReducer
@@ -475,7 +506,7 @@ public class patient {
     }
 
     public void setCalciumReducer(int calciumReducer) {
-        this.calciumReducer = calciumReducer;
+        this.calciumReducer = calciumReducer * 7;
     }
 
     //Test
@@ -486,6 +517,8 @@ public class patient {
 
     public void setNucleicAcid(Boolean nucleicAcid) {
         this.nucleicAcid = nucleicAcid;
+        if (nucleicAcid)
+            this.priceTest += 13;
     }
 
     //get and set coagulationPanel
@@ -495,6 +528,8 @@ public class patient {
 
     public void setCoagulationPanel(Boolean coagulationPanel) {
         this.coagulationPanel = coagulationPanel;
+        if (coagulationPanel)
+            this.priceTest += 14;
     }
 
     //get and set dheaSulfateSerum
@@ -504,6 +539,8 @@ public class patient {
 
     public void setDheaSulfateSerum(Boolean dheaSulfateSerum) {
         this.dheaSulfateSerum = dheaSulfateSerum;
+        if (dheaSulfateSerum)
+            this.priceTest += 15;
     }
 
     //get and set cReactiveProtein
@@ -513,6 +550,8 @@ public class patient {
 
     public void setcReactiveProtein(Boolean cReactiveProtein) {
         this.cReactiveProtein = cReactiveProtein;
+        if (cReactiveProtein)
+            this.priceTest += 16;
     }
 
     //get and set alc
@@ -522,6 +561,8 @@ public class patient {
 
     public void setAlc(Boolean alc) {
         this.alc = alc;
+        if (alc)
+            this.priceTest += 17;
     }
 
     //get and set xray
@@ -531,6 +572,8 @@ public class patient {
 
     public void setXray(Boolean xray) {
         this.xray = xray;
+        if (xray)
+            this.priceTest += 18;
     }
 
     //get and set ctScan
@@ -540,6 +583,8 @@ public class patient {
 
     public void setCtScan(Boolean ctScan) {
         this.ctScan = ctScan;
+        if (ctScan)
+            this.priceTest += 19;
     }
 
     //get and set mri
@@ -549,6 +594,8 @@ public class patient {
 
     public void setMri(Boolean mri) {
         this.mri = mri;
+        if (mri)
+            this.priceTest += 20;
     }
 
     //get and set urinalysis
@@ -558,6 +605,8 @@ public class patient {
 
     public void setUrinalysis(Boolean urinalysis) {
         this.urinalysis = urinalysis;
+        if (urinalysis)
+            this.priceTest += 21;
     }
 
     //get and set stoolCultures
@@ -567,6 +616,8 @@ public class patient {
 
     public void setStoolCultures(Boolean stoolCultures) {
         this.stoolCultures = stoolCultures;
+        if (stoolCultures)
+            this.priceTest += 22;
     }
 
     //diagnosis
@@ -658,5 +709,26 @@ public class patient {
 
     public void setTornMuscleTendon(Boolean tornMuscleTendon) {
         this.tornMuscleTendon = tornMuscleTendon;
+    }
+
+
+    public int getNightsStayed() {
+        return nightsStayed;
+    }
+
+    public int getPriceMed() {
+        return priceMed;
+    }
+
+    public int getPriceTest() {
+        return priceTest;
+    }
+
+    public void setPriceMed(int pain, int anticoagulant, int antiretroviral, int betaBlocker, int insulin, int antiInflammatory, int ursodiol, int calciumReducer) {
+        this.priceMed = (pain) + (anticoagulant * 2) + (antiretroviral * 3) + (betaBlocker * 4) + (insulin * 5) + (antiInflammatory * 6) + (ursodiol * 7) + (calciumReducer * 8);
+    }
+
+    public void setPriceTest(int priceTest) {
+        this.priceTest = priceTest;
     }
 }
