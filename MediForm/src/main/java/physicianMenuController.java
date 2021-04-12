@@ -34,6 +34,26 @@ public class physicianMenuController implements Initializable{
         window.show();
     }
 
+    @FXML
+    void logout(ActionEvent event) throws IOException {
+        Parent logout = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Scene logoutScene = new Scene(logout);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(logoutScene);
+        window.show();
+    }
+
+    @FXML
+    void backToEnterID(ActionEvent event) throws IOException {
+        Parent backToID = FXMLLoader.load(getClass().getResource("enterID.fxml"));
+        Scene backToIDScene = new Scene(backToID);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(backToIDScene);
+        window.show();
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
