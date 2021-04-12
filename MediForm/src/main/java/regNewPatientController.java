@@ -89,7 +89,6 @@ public class regNewPatientController implements Initializable {
         window.show();
     }
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

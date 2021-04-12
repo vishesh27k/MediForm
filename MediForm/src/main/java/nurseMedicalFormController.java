@@ -32,16 +32,14 @@ public class nurseMedicalFormController implements Initializable{
     private TextField bloodPress1;
 
     @FXML
-    private TextField symptoms1;
+    void submitVitals(ActionEvent event) throws IOException {
+        Main.patient.setHeight(Float.parseFloat(height1.getText()));
+        Main.patient.setWeight(Float.parseFloat(weight1.getText()));
+        Main.patient.setTemperature(Float.parseFloat(height1.getText()));
+        Main.patient.setBloodPressure(bloodPress1.getText());
 
-    @FXML
-    private TextField medications1;
-
-    @FXML
-    private TextField tests1;
-
-    @FXML
-    private TextField diagnosis1;
+        DatabaseInterface.updatePatient(Main.patient);
+    }
 
     @FXML
     void toNurseMenu(ActionEvent event) throws IOException {
