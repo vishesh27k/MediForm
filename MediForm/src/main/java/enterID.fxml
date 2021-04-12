@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="enterIDController">
    <children>
       <Label layoutX="210.0" layoutY="135.0" text="Enter Patient ID Below:">
@@ -14,7 +13,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="258.0" layoutY="187.0" prefHeight="26.0" prefWidth="84.0" />
+      <TextField fx:id="patientID" layoutX="258.0" layoutY="187.0" prefHeight="26.0" prefWidth="84.0" />
       <Button layoutX="504.0" layoutY="339.0" mnemonicParsing="false" onAction="#toNurseMenu" text="Next" />
    </children>
 </AnchorPane>
