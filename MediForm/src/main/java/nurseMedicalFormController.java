@@ -33,6 +33,11 @@ public class nurseMedicalFormController implements Initializable{
 
     @FXML
     void submitVitals(ActionEvent event) throws IOException {
+        String name = Main.patient.getName();
+        String[] nameParse = name.split(" ");
+        firstName1.setText(nameParse[0]);
+        lastName1.setText(nameParse[1]);
+
         Main.patient.setHeight(Float.parseFloat(height1.getText()));
         Main.patient.setWeight(Float.parseFloat(weight1.getText()));
         Main.patient.setTemperature(Float.parseFloat(height1.getText()));
