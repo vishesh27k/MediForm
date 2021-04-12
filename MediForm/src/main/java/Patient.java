@@ -1,4 +1,3 @@
-import java.util.Date;
 import java.util.ArrayList;
 
 public class patient {
@@ -137,7 +136,7 @@ public class patient {
     //constructor to initiate every variable in regform. This makes the patient object
     public Patient(String fName, String lName String address, int phone, String emergencyContactName, int emergencyContactNumber, String insuranceProvider,
                    String insuranceID, String primaryPhysician, String medicationName, String medicalHistory, String symptoms,
-                   Date dateOfBirth, Date dateOfVisit;) {
+                   String dateOfBirth, String dateOfVisit;) {
         this.fName = fName;
         this.lName = lName
         this.address = address;
