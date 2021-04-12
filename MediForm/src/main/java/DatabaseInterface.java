@@ -2,6 +2,7 @@
 
 import com.mongodb.*;
 import com.mongodb.client.*;
+import com.mongodb.client.model.Filters;
 
 import java.lang.reflect.Array;
 import java.net.UnknownHostException;
@@ -13,12 +14,13 @@ import org.bson.types.ObjectId;
 import org.bson.codecs.configuration.CodecProvider;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
+import org.bson.conversions.Bson;
 
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static com.mongodb.MongoClientSettings.getDefaultCodecRegistry;
 
-import junit.framework.Test;
+//import junit.framework.Test;
 
 public class DatabaseInterface {
 
@@ -37,7 +39,7 @@ public class DatabaseInterface {
     public static MongoCollection<User> collectionUser = database.getCollection("user", User.class);
     public static MongoCollection<Patient> collectionPatient = database.getCollection("patient", Patient.class);
 
-    public static void main(String[] args) throws UnknownHostException{
+    /*public static void main(String[] args) throws UnknownHostException{
         User testUser = new User("testNamePOJO", "testUsernamePOJO", "testPassPOJO", 4);
 
         Object id = new ObjectId();
@@ -65,7 +67,7 @@ public class DatabaseInterface {
         testArray.add("This");
         testArray.add("Test");
         Document testArrayDoc = new Document("notes", testArray);
-        collectionPatient.insertOne(testArrayDoc);*/
+        collectionPatient.insertOne(testArrayDoc);
     }
 
     /*public static User findUser(String username) {
@@ -247,6 +249,11 @@ public class DatabaseInterface {
             }
         }
         return patientReturn;
+    }
+
+    public static void updatePatient(Patient patientUpdate) {
+        Bson filter = Filters.eq("patientID", patientUpdate.getPatientID());
+        collectionPatient.replaceOne(filter, patientUpdate);
     }
 
     public static User findUser(String username) {
