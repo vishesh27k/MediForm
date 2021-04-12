@@ -137,7 +137,7 @@ public class Patient {
     }
 
     //constructor to initiate every variable
-    public void RegForm(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, Boolean insurance, String insuranceProvider,
+    public Patient(String name, String address, int phone, String emergencyContactName, int emergencyContactNumber, Boolean insurance, String insuranceProvider,
                    String insuranceID, String primaryPhysician, Boolean currentMedication, String[] medicationName, String[] medicalHistory, String[] symptoms,
                    Date dateOfBirth, Date dateOfVisit, String patientID, float height, float weight, float temperature, String bloodPressure, String pulseRate,
                    String assignedPhysician, Boolean isAdmit, String content, int pain, int anticoagulant, int antiretroviral, int betaBlocker, int insulin, int antiInflammatory,
