@@ -32,7 +32,7 @@ public class loginController implements Initializable {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
         switch(Main.user.getRoleID()) {
-            case 0:              
+            case 1:              
                 Parent regHomeParent = FXMLLoader.load(getClass().getResource("regHome.fxml"));
                 Scene regHomeScene = new Scene(regHomeParent);
         
