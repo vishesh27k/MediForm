@@ -11,9 +11,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.Date;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
 public class regNewPatientController implements Initializable {
 
@@ -63,21 +60,11 @@ public class regNewPatientController implements Initializable {
     private TextField medHistory1;
 
     @FXML
-    void submitRegForm(ActionEvent event) throws IOException {
-        
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-        Date DOB;
-        try {
-            DOB = format.parse(dateOfBirth1.getText());
-        }
-        catch (ParseException e) {
-            DOB = null;
-        }
-        int phone = Integer.parseInt(phoneNumber1.getText());
-        int emergencyContactNumber = Integer.parseInt(emergPhoneNumber1.getText());
-        Date DOV = new Date();
+    private TextField dateOfVisit1;
 
-        Patient patientInsert = new Patient(firstName1.getText(), lastName1.getText(), address1.getText(), city1.getText(), state1.getText(), phone, emergContactName1.getText(), emergencyContactNumber, insuranceProvider1.getText(), insuranceID1.getText(), primaryPhysician1.getText(), currentMeds1.getText(), medHistory1.getText(), reasonForVisit1.getText(), DOB, DOV);
+    @FXML
+    void submitRegForm(ActionEvent event) throws IOException {
+        Patient patientInsert = new Patient(firstName1.getText(), lastName1.getText(), address1.getText(), city1.getText(), state1.getText(), phoneNumber1.getText(), emergContactName1.getText(), emergPhoneNumber1.getText(), insuranceProvider1.getText(), insuranceID1.getText(), primaryPhysician1.getText(), currentMeds1.getText(), medHistory1.getText(), reasonForVisit1.getText(), dateOfBirth1.getText(), dateOfVisit1.getText());
 
         DatabaseInterface.insertPatient(patientInsert);
 
