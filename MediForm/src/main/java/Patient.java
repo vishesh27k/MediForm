@@ -2,8 +2,6 @@ import java.util.Date;
 
 import org.bson.types.ObjectId;
 
-import java.util.ArrayList;
-
 public class Patient {
     //regForm variables
     public String name;
@@ -35,7 +33,7 @@ public class Patient {
     public Boolean isAdmit;
 
     //notes variable
-    public ArrayList<String> notes = new ArrayList<String>();
+    public String notes;
 
     //medication variable
     public int pain;
@@ -408,12 +406,22 @@ public class Patient {
 
     //notes
     //get and set notes
-    public ArrayList<String> getNotes() {
+    public String getNotes() {
         return notes;
     }
 
     public void setNotes(String content) {
-        notes.add(content);
+        if(notes == null || notes.isEmpty()){
+            notes = content;
+        }
+        else {
+            StringBuilder sb = new StringBuilder();
+            sb.append(notes);
+            sb.append(";;");
+            sb.append(content);
+    
+            notes = sb.toString();
+        }
     }
 
     //medication
