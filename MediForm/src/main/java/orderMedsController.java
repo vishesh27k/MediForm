@@ -39,7 +39,15 @@ public class orderMedsController implements Initializable{
     @FXML
     private TextField calciumReducer;
 
+    @FXML
+    void toPhyMedForm(ActionEvent event) throws IOException {
+        Parent physMedFormParent = FXMLLoader.load(getClass().getResource("physicianMedicalForm.fxml"));
+        Scene physMedFormScene = new Scene(physMedFormParent);
 
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(physMedFormScene);
+        window.show();
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

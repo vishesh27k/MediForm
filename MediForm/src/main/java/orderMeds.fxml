@@ -13,7 +13,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button layoutX="511.0" layoutY="345.0" mnemonicParsing="false" text="Order" />
+      <Button layoutX="511.0" layoutY="345.0" mnemonicParsing="false" onAction="#toPhyMedForm" text="Order" />
       <Label layoutX="251.0" layoutY="57.0" text="Pain" />
       <Label layoutX="206.0" layoutY="96.0" text="Anti-Coagulant" />
       <Label layoutX="212.0" layoutY="173.0" text="Anti-Retroviral" />
