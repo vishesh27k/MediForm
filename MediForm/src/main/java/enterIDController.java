@@ -23,7 +23,7 @@ public class enterIDController implements Initializable {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
         switch(Main.user.getRoleID()) {
-            case 0:
+            case 1:
                 Parent viewRegInfoParent = FXMLLoader.load(getClass().getResource("viewRegInfo.fxml"));
                 Scene viewRegInfoScene = new Scene(viewRegInfoParent);
         
@@ -31,7 +31,7 @@ public class enterIDController implements Initializable {
                 window.show();
                 break;
 
-            case 1:
+            case 2:
                 Parent nurseMenuParent = FXMLLoader.load(getClass().getResource("nurseMenu.fxml"));
                 Scene nurseMenuScene = new Scene(nurseMenuParent);
         
@@ -39,7 +39,7 @@ public class enterIDController implements Initializable {
                 window.show();
                 break;
             
-            case 2:
+            case 3:
                 Parent physicianMenuParent = FXMLLoader.load(getClass().getResource("physicianMenu.fxml"));
                 Scene physicianMenuScene = new Scene(physicianMenuParent);
         
@@ -47,7 +47,7 @@ public class enterIDController implements Initializable {
                 window.show();
                 break;
 
-            case 3:
+            case 4:
                 Parent billParent = FXMLLoader.load(getClass().getResource("bill.fxml"));
                 Scene billScene = new Scene(billParent);
         

@@ -5,8 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -31,6 +29,26 @@ public class physicianMenuController implements Initializable{
         
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(physicianMedFormScene);
+        window.show();
+    }
+
+    @FXML
+    void logout(ActionEvent event) throws IOException {
+        Parent logout = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Scene logoutScene = new Scene(logout);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(logoutScene);
+        window.show();
+    }
+
+    @FXML
+    void backToEnterID(ActionEvent event) throws IOException {
+        Parent backToID = FXMLLoader.load(getClass().getResource("enterID.fxml"));
+        Scene backToIDScene = new Scene(backToID);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(backToIDScene);
         window.show();
     }
 

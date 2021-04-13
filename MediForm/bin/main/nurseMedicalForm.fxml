@@ -41,8 +41,8 @@
             <TextField fx:id="medications1" layoutX="185.0" layoutY="263.0" prefHeight="26.0" prefWidth="202.0" />
             <TextField fx:id="tests1" layoutX="185.0" layoutY="292.0" prefHeight="26.0" prefWidth="202.0" />
             <TextField fx:id="diagnosis1" layoutX="185.0" layoutY="320.0" prefHeight="26.0" prefWidth="202.0" />
-            <Button layoutX="31.0" layoutY="346.0" mnemonicParsing="false" text="Back" />
-            <Button layoutX="502.0" layoutY="346.0" mnemonicParsing="false" text="Submit" />
+            <Button layoutX="31.0" layoutY="346.0" mnemonicParsing="false" onAction="#toNurseMenu" text="Back" />
+            <Button layoutX="502.0" layoutY="346.0" mnemonicParsing="false" onAction="#submitVitals" text="Submit" />
          </children>
       </AnchorPane>
    </children>
