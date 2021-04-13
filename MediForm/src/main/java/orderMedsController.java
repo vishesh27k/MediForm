@@ -39,7 +39,26 @@ public class orderMedsController implements Initializable{
     @FXML
     private TextField calciumReducer;
 
+    @FXML
+    void orderMeds(ActionEvent event) throws IOException {
+        Main.patient.setPain(Integer.parseInt(pain.getText()));
+        Main.patient.setAnticoagulant(Integer.parseInt(antiCoagulant.getText()));
+        Main.patient.setBetaBlocker(Integer.parseInt(betaBlocker.getText()));
+        Main.patient.setAntiretroviral(Integer.parseInt(antiRetroviral.getText()));
+        Main.patient.setInsulin(Integer.parseInt(insulin.getText()));
+        Main.patient.setAntiInflammatory(Integer.parseInt(antiInflammatory.getText()));
+        Main.patient.setUrsodiol(Integer.parseInt(ursodiol.getText()));
+        Main.patient.setCalciumReducer(Integer.parseInt(calciumReducer.getText()));
 
+        DatabaseInterface.updatePatient(Main.patient);
+
+        Parent orderMedsParent = FXMLLoader.load(getClass().getResource("physicianMedicalForm.fxml"));
+        Scene orderMedsScene= new Scene(orderMedsParent);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(orderMedsScene);
+        window.show();
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
