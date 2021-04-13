@@ -295,22 +295,6 @@ public class Patient {
         this.insuranceProvider = insuranceProvider;
     }
 
-    public String getfName() {
-        return fName;
-    }
-
-    public String getlName() {
-        return lName;
-    }
-
-    public void setfName(String fName) {
-        this.fName = fName;
-    }
-
-    public void setlName(String lName) {
-        this.lName = lName;
-    }
-
     //get and set name
     public String getName() {
         return name;
@@ -448,14 +432,6 @@ public class Patient {
     
             notes = sb.toString();
         }
-    }
-
-    public ArrayList<String> getNotes() {
-        return notes;
-    }
-
-    public void setNotes(String note) {
-        notes.add(note);
     }
 
     //medication
