@@ -153,6 +153,8 @@ public class Patient {
 
     // this is all the information after.
     public Patient(float height, float weight, float temperature, String bloodPressure, String pulseRate, String assignedPhysician, Boolean isAdmit, int pain, int anticoagulant, int antiretroviral, int betaBlocker, int insulin, int antiInflammatory, int ursodiol, int calciumReducer, Boolean nucleicAcid, Boolean dheaSulfateSerum, Boolean cReactiveProtein, Boolean alc, Boolean xray, Boolean ctScan, Boolean mri, Boolean urinalysis, Boolean stoolCultures, Boolean brokenBone, Boolean heartAttack, Boolean laceration, Boolean hivAIDS, Boolean liverFailure, Boolean kidneyFailure, Boolean diabetes, Boolean infammatoryBowlDisease, Boolean stroke, Boolean tornMuscleTendon, Boolean coagulationPanel) {
+        Object id = new ObjectId();
+        patientID = id.toString();
         this.height = height;
         this.weight = weight;
         this.temperature = temperature;
@@ -289,8 +291,8 @@ public class Patient {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String fname, String lname) {
+        this.name = fname + " " + lname;
     }
 
     //get and set primary Physician
