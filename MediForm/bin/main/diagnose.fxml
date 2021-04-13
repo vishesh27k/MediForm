@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagnoseController">
+   <children>
+      <Label layoutX="250.0" layoutY="26.0" text="Diagnose">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="brokenBone" layoutX="213.0" layoutY="76.0" mnemonicParsing="false" text="Broken Bone" />
+      <CheckBox fx:id="heartAttack" layoutX="342.0" layoutY="94.0" mnemonicParsing="false" text="Heart Attack" />
+      <CheckBox fx:id="laceration" layoutX="212.0" layoutY="125.0" mnemonicParsing="false" text="Laceration" />
+      <CheckBox fx:id="hivAids" layoutX="342.0" layoutY="143.0" mnemonicParsing="false" text="HIV/AIDS" />
+      <CheckBox fx:id="liverFailure" layoutX="204.0" layoutY="182.0" mnemonicParsing="false" text="Liver Failure" />
+      <CheckBox fx:id="kidneyFailure" layoutX="342.0" layoutY="191.0" mnemonicParsing="false" text="Kidney Failure" />
+      <CheckBox fx:id="diabetes" layoutX="212.0" layoutY="235.0" mnemonicParsing="false" text="Diabetes" />
+      <CheckBox fx:id="inflammatoryBowlDisease" layoutX="335.0" layoutY="253.0" mnemonicParsing="false" text="Inflammatory Bowl Disease" />
+      <CheckBox fx:id="stroke" layoutX="205.0" layoutY="281.0" mnemonicParsing="false" text="Stroke" />
+      <CheckBox fx:id="tornMuscleTendon" layoutX="335.0" layoutY="306.0" mnemonicParsing="false" text="Torn Muscle Tendon" />
+      <Button layoutX="505.0" layoutY="351.0" mnemonicParsing="false" text="Diagnose" />
+   </children>
+</AnchorPane>
