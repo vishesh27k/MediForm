@@ -62,6 +62,16 @@ public class nurseMenuController implements Initializable {
         window.show();
     }
 
+    @FXML
+    void toPrintDischarge(ActionEvent event) throws IOException {
+        Parent printDischargeParent = FXMLLoader.load(getClass().getResource("printDischarge.fxml"));
+        Scene printDischargeScene = new Scene(printDischargeParent);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(printDischargeScene);
+        window.show();
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
