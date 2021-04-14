@@ -32,12 +32,13 @@ public class nurseMedicalFormController implements Initializable{
     private TextField bloodPress1;
 
     @FXML
-    void submitVitals(ActionEvent event) throws IOException {
-        String name = Main.patient.getName();
-        String[] nameParse = name.split(" ");
-        firstName1.setText(nameParse[0]);
-        lastName1.setText(nameParse[1]);
+    private TextField pulseRate1;
 
+    @FXML
+    private TextField assignedPhysician1;
+
+    @FXML
+    void submitVitals(ActionEvent event) throws IOException {
         Main.patient.setHeight(Float.parseFloat(height1.getText()));
         Main.patient.setWeight(Float.parseFloat(weight1.getText()));
         Main.patient.setTemperature(Float.parseFloat(height1.getText()));
@@ -58,6 +59,33 @@ public class nurseMedicalFormController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        String name = Main.patient.getName();
+        String[] nameSplit = name.split(" ");
+        firstName1.setText(nameSplit[0]);
+        lastName1.setText(nameSplit[1]);
 
+        Float f = (Float) Main.patient.getHeight();
+        if(f == 0) height1.setText("");
+        else height1.setText(f.toString());
+
+        f = (Float) Main.patient.getWeight();
+        if(f == 0) weight1.setText("");
+        else weight1.setText(f.toString());
+
+        f = (Float) Main.patient.getTemperature();
+        if(f == 0) temp1.setText("");
+        else temp1.setText(f.toString());
+
+        String s = Main.patient.getBloodPressure();
+        if(s == null) bloodPress1.setText("");
+        else bloodPress1.setText(s);
+
+        s = Main.patient.getPulseRate();
+        if(s == null) pulseRate1.setText("");
+        else pulseRate1.setText(s);
+
+        s = Main.patient.getAssignedPhysician();
+        if(s == null) assignedPhysician1.setText("");
+        else assignedPhysician1.setText(s);
     }
 }
