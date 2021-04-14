@@ -26,7 +26,8 @@ public class loginController implements Initializable {
 
         //check entered pass against database pass
         if(password.getText() != Main.user.getPassword()) {
-            //reject login and prompt to re-enter login info?
+            //username.setText("Wrong");
+            //return;
         }
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
