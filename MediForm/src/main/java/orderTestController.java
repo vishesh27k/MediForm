@@ -5,6 +5,8 @@ import javafx.scene.control.CheckBox;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.mongodb.internal.operation.CreateCollectionOperation;
+
 import javafx.event.ActionEvent;
 import java.io.IOException;
 
@@ -72,6 +74,15 @@ public class orderTestController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        nucleicAcid.setSelected(Main.patient.getNucleicAcid());
+        coagulationPanel.setSelected(Main.patient.getCoagulationPanel());
+        dheaSulfateSerum.setSelected(Main.patient.getDheaSulfateSerum());
+        cReactiveProtein.setSelected(Main.patient.getcReactiveProtein());
+        alc.setSelected(Main.patient.getAlc());
+        xRay.setSelected(Main.patient.getXray());
+        mri.setSelected(Main.patient.getMri());
+        ctScan.setSelected(Main.patient.getCtScan());
+        urinalysis.setSelected(Main.patient.getUrinalysis());
+        stoolCulture.setSelected(Main.patient.getStoolCultures());
     }
 }
