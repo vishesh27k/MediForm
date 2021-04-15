@@ -4,9 +4,6 @@ import javafx.scene.control.CheckBox;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import com.mongodb.internal.connection.IdHoldingBsonWriter;
-
 import javafx.event.ActionEvent;
 import java.io.IOException;
 
