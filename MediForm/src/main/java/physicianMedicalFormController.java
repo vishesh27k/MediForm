@@ -43,6 +43,10 @@ public class physicianMedicalFormController implements Initializable{
 
     @FXML
     private TextField diagnosis1;
+
+    @FXML
+    private TextField pulseRate1;
+
     @FXML
     void toPhysicianMenu(ActionEvent event) throws IOException {
         Parent physicianMenuParent = FXMLLoader.load(getClass().getResource("physicianMenu.fxml"));
@@ -109,9 +113,5 @@ public class physicianMedicalFormController implements Initializable{
         s = Main.patient.getPulseRate();
         if(s == null) pulseRate1.setText("");
         else pulseRate1.setText(s);
-
-        s = Main.patient.getAssignedPhysician();
-        if(s == null) assignedPhysician1.setText("");
-        else assignedPhysician1.setText(s);
     }
 }
