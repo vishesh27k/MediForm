@@ -85,6 +85,33 @@ public class physicianMedicalFormController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        String name = Main.patient.getName();
+        String[] nameSplit = name.split(" ");
+        firstName1.setText(nameSplit[0]);
+        lastName1.setText(nameSplit[1]);
 
+        Float f = (Float) Main.patient.getHeight();
+        if(f == 0) height1.setText("");
+        else height1.setText(f.toString());
+
+        f = (Float) Main.patient.getWeight();
+        if(f == 0) weight1.setText("");
+        else weight1.setText(f.toString());
+
+        f = (Float) Main.patient.getTemperature();
+        if(f == 0) temp1.setText("");
+        else temp1.setText(f.toString());
+
+        String s = Main.patient.getBloodPressure();
+        if(s == null) bloodPress1.setText("");
+        else bloodPress1.setText(s);
+
+        s = Main.patient.getPulseRate();
+        if(s == null) pulseRate1.setText("");
+        else pulseRate1.setText(s);
+
+        s = Main.patient.getAssignedPhysician();
+        if(s == null) assignedPhysician1.setText("");
+        else assignedPhysician1.setText(s);
     }
 }
