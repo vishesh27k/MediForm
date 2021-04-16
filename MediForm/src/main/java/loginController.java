@@ -31,7 +31,7 @@ public class loginController implements Initializable {
             alert.setContentText("Username or password was invalid. Please try again.");
             alert.showAndWait();
             //username.setText("Wrong");
-            //return;
+            return;
         }
 
         if(username.getText().length() == 0 || password.getText().length() == 0){
