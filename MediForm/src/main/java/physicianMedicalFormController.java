@@ -48,6 +48,24 @@ public class physicianMedicalFormController implements Initializable{
     private TextField pulseRate1;
 
     @FXML
+    void submitVitals(ActionEvent event) throws IOException {
+        Main.patient.setHeight(Float.parseFloat(height1.getText()));
+        Main.patient.setWeight(Float.parseFloat(weight1.getText()));
+        Main.patient.setTemperature(Float.parseFloat(height1.getText()));
+        Main.patient.setBloodPressure(bloodPress1.getText());
+        Main.patient.setPulseRate(pulseRate1.getText());
+
+        DatabaseInterface.updatePatient(Main.patient);
+
+        Parent nurseMenuParent = FXMLLoader.load(getClass().getResource("nurseMenu.fxml"));
+        Scene nurseMenuScene = new Scene(nurseMenuParent);
+        
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(nurseMenuScene);
+        window.show();
+    }
+
+    @FXML
     void toPhysicianMenu(ActionEvent event) throws IOException {
         Parent physicianMenuParent = FXMLLoader.load(getClass().getResource("physicianMenu.fxml"));
         Scene physicianMenuScene = new Scene(physicianMenuParent);

@@ -42,7 +42,7 @@
                 <TextField fx:id="tests1" layoutX="185.0" layoutY="292.0" prefHeight="26.0" prefWidth="202.0" />
                 <TextField fx:id="diagnosis1" layoutX="185.0" layoutY="320.0" prefHeight="26.0" prefWidth="202.0" />
                 <Button layoutX="31.0" layoutY="346.0" mnemonicParsing="false" onAction="#toPhysicianMenu" text="Back" />
-                <Button layoutX="502.0" layoutY="346.0" mnemonicParsing="false" onAction="#toPhysicianMenu" text="Submit" />
+                <Button layoutX="502.0" layoutY="346.0" mnemonicParsing="false" onAction="#submitVitals" text="Submit" />
             <Button layoutX="399.0" layoutY="264.0" mnemonicParsing="false" onAction="#toOrderMeds" text="Order Meds" />
             <Button layoutX="399.0" layoutY="293.0" mnemonicParsing="false" onAction="#toOrderTest" text="Order Test" />
             <Button layoutX="399.0" layoutY="321.0" mnemonicParsing="false" onAction="#toDiagnose" text="Diagnose" />
