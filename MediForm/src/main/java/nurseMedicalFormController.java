@@ -43,6 +43,8 @@ public class nurseMedicalFormController implements Initializable{
         Main.patient.setWeight(Float.parseFloat(weight1.getText()));
         Main.patient.setTemperature(Float.parseFloat(height1.getText()));
         Main.patient.setBloodPressure(bloodPress1.getText());
+        Main.patient.setPulseRate(pulseRate1.getText());
+        Main.patient.setAssignedPhysician(assignedPhysician1.getText());
 
         DatabaseInterface.updatePatient(Main.patient);
     }
