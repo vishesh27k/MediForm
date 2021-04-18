@@ -421,17 +421,7 @@ public class Patient {
     }
 
     public void setNotes(String content) {
-        if(notes == null || notes.isEmpty()){
-            notes = content;
-        }
-        else {
-            StringBuilder sb = new StringBuilder();
-            sb.append(notes);
-            sb.append(";;");
-            sb.append(content);
-    
-            notes = sb.toString();
-        }
+        notes = content;
     }
 
     //medication

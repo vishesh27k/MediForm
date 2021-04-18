@@ -28,6 +28,10 @@ public class printDischargeController implements Initializable{
 
     @FXML
     void toNurseMenu(ActionEvent event) throws IOException {
+        Main.patient.setNightsStayed(Integer.parseInt(nightsStayed.getText()));
+
+        DatabaseInterface.updatePatient(Main.patient);
+
         Parent nurseMenuParent = FXMLLoader.load(getClass().getResource("nurseMenu.fxml"));
         Scene nurseMenuScene = new Scene(nurseMenuParent);
         
@@ -38,6 +42,9 @@ public class printDischargeController implements Initializable{
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        String name = Main.patient.getName();
+        String[] nameSplit = name.split(" ");
+        firstName.setText(nameSplit[0]);
+        lastName.setText(nameSplit[1]);
     }
 }

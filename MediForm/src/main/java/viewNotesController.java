@@ -5,7 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,16 +16,23 @@ public class viewNotesController implements Initializable{
 
 
     @FXML
-    private TextArea notes1;
+    private TextField notes;
 
     @FXML
-    void toNewNote(ActionEvent event) throws IOException {
-        Parent newNoteParent = FXMLLoader.load(getClass().getResource("newNote.fxml"));
-        Scene newNoteScene = new Scene(newNoteParent);
+    private TextField addNote;
+
+    @FXML
+    void add(ActionEvent event) throws IOException {
+        StringBuilder sb = new StringBuilder();
+        sb.append(Main.patient.getNotes());
         
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(newNoteScene);
-        window.show();
+        sb.append("\r\n");
+        sb.append(addNote.getText());
+
+        Main.patient.setNotes(sb.toString());
+        notes.setText(sb.toString());
+
+        DatabaseInterface.updatePatient(Main.patient);
     }
 
     @FXML
@@ -40,6 +47,6 @@ public class viewNotesController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        notes.setText(Main.patient.getNotes());
     }
 }
