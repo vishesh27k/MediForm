@@ -5,6 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -18,7 +19,23 @@ public class enterIDController implements Initializable {
 
     @FXML
     void toNurseMenu(ActionEvent event) throws IOException {
+        if(patientID.getText().length() == 0){
+            Alert alert1 = new Alert(Alert.AlertType.ERROR);
+            alert1.setContentText("Patient ID field is empty.");
+            alert1.showAndWait();
+            return;
+        }
+        
+        String id = patientID.getText();
+        
         Main.patient = DatabaseInterface.findPatient(patientID.getText());
+
+        if(!id.equals(Main.patient.getPatientID())) {
+            Alert alert1 = new Alert(Alert.AlertType.ERROR);
+            alert1.setContentText("Patient ID does not exist.");
+            alert1.showAndWait();
+            return;
+        }
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
