@@ -39,7 +39,7 @@ public class enterIDController implements Initializable {
 
         switch(Main.user.getRoleID()) {
             case 1:
-                Parent viewRegInfoParent = FXMLLoader.load(getClass().getResource("viewRegInfo.fxml"));
+                Parent viewRegInfoParent = FXMLLoader.load(getClass().getResource("viewRegForm.fxml"));
                 Scene viewRegInfoScene = new Scene(viewRegInfoParent);
         
                 window.setScene(viewRegInfoScene);
