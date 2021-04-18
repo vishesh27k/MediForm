@@ -25,12 +25,10 @@ public class enterIDController implements Initializable {
             alert1.showAndWait();
             return;
         }
-        
-        String id = patientID.getText();
-        
+                
         Main.patient = DatabaseInterface.findPatient(patientID.getText());
 
-        if(!id.equals(Main.patient.getPatientID())) {
+        if(!patientID.getText().equals(Main.patient.getPatientID())) {
             Alert alert1 = new Alert(Alert.AlertType.ERROR);
             alert1.setContentText("Patient ID does not exist.");
             alert1.showAndWait();
