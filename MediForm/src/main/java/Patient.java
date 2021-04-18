@@ -450,7 +450,7 @@ public class Patient {
     }
 
     public void setAnticoagulant(int anticoagulant) {
-        this.anticoagulant = anticoagulant * 2;
+        this.anticoagulant = anticoagulant;
     }
 
     //get and set antiretroviral
@@ -468,7 +468,7 @@ public class Patient {
     }
 
     public void setBetaBlocker(int betaBlocker) {
-        this.betaBlocker = betaBlocker * 3;
+        this.betaBlocker = betaBlocker;
     }
 
     //get and set insulin
@@ -477,7 +477,7 @@ public class Patient {
     }
 
     public void setInsulin(int insulin) {
-        this.insulin = insulin * 4;
+        this.insulin = insulin;
     }
 
     //get and set antiInflammartory
@@ -486,7 +486,7 @@ public class Patient {
     }
 
     public void setAntiInflammatory(int antiInflammatory) {
-        this.antiInflammatory = antiInflammatory * 5;
+        this.antiInflammatory = antiInflammatory;
     }
 
     //get and set ursodial
@@ -495,7 +495,7 @@ public class Patient {
     }
 
     public void setUrsodiol(int ursodiol) {
-        this.ursodiol = ursodiol * 6;
+        this.ursodiol = ursodiol;
     }
 
     //get and set calciumReducer
@@ -504,7 +504,7 @@ public class Patient {
     }
 
     public void setCalciumReducer(int calciumReducer) {
-        this.calciumReducer = calciumReducer * 7;
+        this.calciumReducer = calciumReducer;
     }
 
     //Test
@@ -726,7 +726,4 @@ public class Patient {
         this.priceMed = (pain) + (anticoagulant * 2) + (antiretroviral * 3) + (betaBlocker * 4) + (insulin * 5) + (antiInflammatory * 6) + (ursodiol * 7) + (calciumReducer * 8);
     }
 
-    public void setPriceTest(int priceTest) {
-        this.priceTest = priceTest;
-    }
 }
