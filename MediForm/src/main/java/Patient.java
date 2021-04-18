@@ -691,6 +691,14 @@ public class Patient {
         nightsStayed = nights;
     }
 
+    public int getOvernightCost() {
+        return nightsStayed * 30;
+    }
+
+    public int getTotal() {
+        return priceMed + priceTest + (nightsStayed * 30);
+    }
+
     public int getPriceMed() {
         return priceMed;
     }
