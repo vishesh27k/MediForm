@@ -142,6 +142,9 @@ public class Patient {
     //constructor to initiate every variable in regform. This makes the patient object
 
     public Patient(String fName, String lName, String address, String city, String state, String phone, String emergencyContactName, String emergencyContactNumber, String insuranceProvider, String insuranceID, String primaryPhysician, String medicationName, String medicalHistory, String symptoms, String dateOfBirth, String dateOfVisit) {
+        Object id = new ObjectId();
+        patientID = id.toString();
+        
         this.name = fName + " " + lName;
         this.address = address;
         this.city = city;
