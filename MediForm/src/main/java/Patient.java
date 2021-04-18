@@ -440,7 +440,7 @@ public class Patient {
     }
 
     public void setAnticoagulant(int anticoagulant) {
-        this.anticoagulant = anticoagulant * 2;
+        this.anticoagulant = anticoagulant ;
     }
 
     //get and set antiretroviral
@@ -458,7 +458,7 @@ public class Patient {
     }
 
     public void setBetaBlocker(int betaBlocker) {
-        this.betaBlocker = betaBlocker * 3;
+        this.betaBlocker = betaBlocker;
     }
 
     //get and set insulin
@@ -467,7 +467,7 @@ public class Patient {
     }
 
     public void setInsulin(int insulin) {
-        this.insulin = insulin * 4;
+        this.insulin = insulin;
     }
 
     //get and set antiInflammartory
@@ -476,7 +476,7 @@ public class Patient {
     }
 
     public void setAntiInflammatory(int antiInflammatory) {
-        this.antiInflammatory = antiInflammatory * 5;
+        this.antiInflammatory = antiInflammatory;
     }
 
     //get and set ursodial
@@ -485,7 +485,7 @@ public class Patient {
     }
 
     public void setUrsodiol(int ursodiol) {
-        this.ursodiol = ursodiol * 6;
+        this.ursodiol = ursodiol;
     }
 
     //get and set calciumReducer
@@ -494,7 +494,7 @@ public class Patient {
     }
 
     public void setCalciumReducer(int calciumReducer) {
-        this.calciumReducer = calciumReducer * 7;
+        this.calciumReducer = calciumReducer;
     }
 
     //Test
@@ -505,8 +505,6 @@ public class Patient {
 
     public void setNucleicAcid(Boolean nucleicAcid) {
         this.nucleicAcid = nucleicAcid;
-        if (nucleicAcid)
-            this.priceTest += 13;
     }
 
     //get and set coagulationPanel
@@ -516,8 +514,6 @@ public class Patient {
 
     public void setCoagulationPanel(Boolean coagulationPanel) {
         this.coagulationPanel = coagulationPanel;
-        if (coagulationPanel)
-            this.priceTest += 14;
     }
 
     //get and set dheaSulfateSerum
@@ -527,8 +523,7 @@ public class Patient {
 
     public void setDheaSulfateSerum(Boolean dheaSulfateSerum) {
         this.dheaSulfateSerum = dheaSulfateSerum;
-        if (dheaSulfateSerum)
-            this.priceTest += 15;
+
     }
 
     //get and set cReactiveProtein
@@ -538,8 +533,6 @@ public class Patient {
 
     public void setcReactiveProtein(Boolean cReactiveProtein) {
         this.cReactiveProtein = cReactiveProtein;
-        if (cReactiveProtein)
-            this.priceTest += 16;
     }
 
     //get and set alc
@@ -549,8 +542,6 @@ public class Patient {
 
     public void setAlc(Boolean alc) {
         this.alc = alc;
-        if (alc)
-            this.priceTest += 17;
     }
 
     //get and set xray
@@ -560,8 +551,6 @@ public class Patient {
 
     public void setXray(Boolean xray) {
         this.xray = xray;
-        if (xray)
-            this.priceTest += 18;
     }
 
     //get and set ctScan
@@ -571,8 +560,6 @@ public class Patient {
 
     public void setCtScan(Boolean ctScan) {
         this.ctScan = ctScan;
-        if (ctScan)
-            this.priceTest += 19;
     }
 
     //get and set mri
@@ -582,8 +569,6 @@ public class Patient {
 
     public void setMri(Boolean mri) {
         this.mri = mri;
-        if (mri)
-            this.priceTest += 20;
     }
 
     //get and set urinalysis
@@ -604,8 +589,6 @@ public class Patient {
 
     public void setStoolCultures(Boolean stoolCultures) {
         this.stoolCultures = stoolCultures;
-        if (stoolCultures)
-            this.priceTest += 22;
     }
 
     //diagnosis
@@ -704,6 +687,10 @@ public class Patient {
         return nightsStayed;
     }
 
+    public void setNightsStayed(int nights) {
+        nightsStayed = nights;
+    }
+
     public int getPriceMed() {
         return priceMed;
     }
@@ -714,6 +701,28 @@ public class Patient {
 
     public void setPriceMed(int pain, int anticoagulant, int antiretroviral, int betaBlocker, int insulin, int antiInflammatory, int ursodiol, int calciumReducer) {
         this.priceMed = (pain) + (anticoagulant * 2) + (antiretroviral * 3) + (betaBlocker * 4) + (insulin * 5) + (antiInflammatory * 6) + (ursodiol * 7) + (calciumReducer * 8);
+    }
+
+    public void calculatePrices() {
+        priceMed = (pain) + (anticoagulant * 2) + (antiretroviral * 3) + (betaBlocker * 4) + (insulin * 5) + (antiInflammatory * 6) + (ursodiol * 7) + (calciumReducer * 8);
+        if (nucleicAcid)
+            priceTest += 13;
+        if (coagulationPanel)
+            priceTest += 14;
+        if (dheaSulfateSerum)
+            priceTest += 15;
+        if (cReactiveProtein)
+            priceTest += 16;
+        if (alc)
+            priceTest += 17;
+        if (xray)
+            priceTest += 18;
+        if (ctScan)
+            priceTest += 19;
+        if (mri)
+            priceTest += 20;
+        if (stoolCultures)
+            priceTest += 22;
     }
 
     public void setPriceTest(int priceTest) {
