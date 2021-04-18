@@ -62,6 +62,14 @@ public class orderMedsController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        pain.setText("0");
+        antiCoagulant.setText("0");
+        betaBlocker.setText("0");
+        antiRetroviral.setText("0");
+        insulin.setText("0");
+        antiInflammatory.setText("0");
+        ursodiol.setText("0");
+        calciumReducer.setText("0");
 
     }
 }
