@@ -28,6 +28,10 @@ public class printDischargeController implements Initializable{
 
     @FXML
     void toNurseMenu(ActionEvent event) throws IOException {
+        Main.patient.setNightsStayed(Integer.parseInt(nightsStayed.getText()));
+
+        DatabaseInterface.updatePatient(Main.patient);
+
         Parent nurseMenuParent = FXMLLoader.load(getClass().getResource("nurseMenu.fxml"));
         Scene nurseMenuScene = new Scene(nurseMenuParent);
         
