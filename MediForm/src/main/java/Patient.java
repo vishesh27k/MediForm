@@ -46,28 +46,28 @@ public class Patient {
     public int calciumReducer;
 
     //test variable
-    public Boolean nucleicAcid;
-    public Boolean coagulationPanel;
-    public Boolean dheaSulfateSerum;
-    public Boolean cReactiveProtein;
-    public Boolean alc;
-    public Boolean xray;
-    public Boolean ctScan;
-    public Boolean mri;
-    public Boolean urinalysis;
-    public Boolean stoolCultures;
+    public Boolean nucleicAcid = false;
+    public Boolean coagulationPanel = false;
+    public Boolean dheaSulfateSerum = false;
+    public Boolean cReactiveProtein = false;
+    public Boolean alc = false;
+    public Boolean xray = false;
+    public Boolean ctScan = false;
+    public Boolean mri = false;
+    public Boolean urinalysis = false;
+    public Boolean stoolCultures = false;
 
     //diagnosis variable
-    public Boolean brokenBone;
-    public Boolean heartAttack;
-    public Boolean laceration;
-    public Boolean hivAIDS;
-    public Boolean liverFailure;
-    public Boolean kidneyFailure;
-    public Boolean diabetes;
-    public Boolean infammatoryBowlDisease;
-    public Boolean stroke;
-    public Boolean tornMuscleTendon;
+    public Boolean brokenBone = false;
+    public Boolean heartAttack = false;
+    public Boolean laceration = false;
+    public Boolean hivAIDS = false;
+    public Boolean liverFailure = false;
+    public Boolean kidneyFailure = false;
+    public Boolean diabetes = false;
+    public Boolean infammatoryBowlDisease = false;
+    public Boolean stroke = false;
+    public Boolean tornMuscleTendon = false;
 
     //billing variable
     public int priceTest;
