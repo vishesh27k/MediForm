@@ -22,7 +22,7 @@
       <Label layoutX="150.0" layoutY="301.0" text="Total Cost:" />
       <TextField fx:id="firstName" layoutX="226.0" layoutY="73.0" />
       <TextField fx:id="lastName" layoutX="226.0" layoutY="103.0" />
-      <TextField fx:id="pateintID" layoutX="226.0" layoutY="139.0" prefHeight="26.0" prefWidth="62.0" />
+      <TextField fx:id="patientID" layoutX="226.0" layoutY="139.0" prefHeight="26.0" prefWidth="62.0" />
       <TextField fx:id="medCost" layoutX="242.0" layoutY="171.0" prefHeight="26.0" prefWidth="82.0" />
       <TextField fx:id="testCost" layoutX="226.0" layoutY="207.0" prefHeight="26.0" prefWidth="62.0" />
       <TextField fx:id="overnightCost" layoutX="234.0" layoutY="240.0" prefHeight="26.0" prefWidth="62.0" />
