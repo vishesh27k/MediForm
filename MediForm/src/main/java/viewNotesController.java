@@ -24,9 +24,11 @@ public class viewNotesController implements Initializable{
     @FXML
     void add(ActionEvent event) throws IOException {
         StringBuilder sb = new StringBuilder();
-        sb.append(Main.patient.getNotes());
+        if(Main.patient.getNotes() != null || Main.patient.getNotes() != "") {
+            sb.append(Main.patient.getNotes());
+            sb.append("\r\n");
+        }
         
-        sb.append("\r\n");
         sb.append(addNote.getText());
 
         Main.patient.setNotes(sb.toString());
