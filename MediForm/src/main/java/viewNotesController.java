@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -16,7 +17,7 @@ public class viewNotesController implements Initializable{
 
 
     @FXML
-    private TextField notes;
+    private TextArea notes;
 
     @FXML
     private TextField addNote;
