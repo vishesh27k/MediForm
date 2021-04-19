@@ -236,7 +236,7 @@ public class Patient {
 
     //get and set State
     public String getState() {
-        return city;
+        return state;
     }
 
     public void setState(String state) {
