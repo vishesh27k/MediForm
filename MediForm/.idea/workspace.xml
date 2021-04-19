@@ -4,7 +4,87 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad556992-66d2-4c82-8dcd-3b7583cf8eec" name="Default Changelist" comment="" />
+    <list default="true" id="ad556992-66d2-4c82-8dcd-3b7583cf8eec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries-with-intellij-classes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.buildship.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/DatabaseInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/DatabaseInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/Patient.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/Patient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/bill.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/bill.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/billController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/billController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/diagnose.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/diagnose.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/diagnoseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/diagnoseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/enterIDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/enterIDController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/enterVitalsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/enterVitalsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/loginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/loginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/newNoteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/newNoteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/nurseMedicalFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/nurseMedicalFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/nurseMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/nurseMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/orderMedsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/orderMedsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/orderTestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/orderTestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/physicianMedicalFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/physicianMedicalFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/physicianMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/physicianMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/printDischargeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/printDischargeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/regHome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/regHome.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/regHomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/regHomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/regNewPatientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/regNewPatientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/viewNotesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/viewNotesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/viewRegFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/viewRegFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/DatabaseInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/DatabaseInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Patient$Diagnosis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Patient$Medications.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Patient$Tests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Patient.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Patient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/billController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/billController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/diagnoseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/diagnoseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/enterIDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/enterIDController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/enterVitalsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/enterVitalsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/loginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/loginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/newNoteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/newNoteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nurseMedicalFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/nurseMedicalFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/nurseMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/nurseMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/orderMedsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/orderMedsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/orderTestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/orderTestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/physicianMedicalFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/physicianMedicalFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/physicianMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/physicianMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/printDischargeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/printDischargeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/regHomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/regHomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/regNewPatientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/regNewPatientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/viewNotesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/viewNotesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/viewRegFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/viewRegFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bill.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bill.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/diagnose.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/diagnose.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enterID.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/enterID.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enterVitals.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/enterVitals.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/newNote.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/newNote.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nurseMedicalForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nurseMedicalForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nurseMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nurseMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/orderMeds.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/orderMeds.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/orderTest.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/orderTest.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/physicianMedicalForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/physicianMedicalForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/physicianMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/physicianMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/printDischarge.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/printDischarge.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/regHome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regHome.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/regNewPatient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/regNewPatient.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/viewNotes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/viewNotes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/viewRegForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/viewRegForm.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,18 +105,23 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nic\Documents\GitHub\MediForm\MediForm\src\main\resources" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Launcher">
-    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Launcher" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="16" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Launcher" />
-      <module name="untitled.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="untitled.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -55,10 +140,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="16" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="untitled.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Launcher" />
+      <item itemvalue="Application.Main" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Launcher" />
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -88,5 +184,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/untitled$Main__1_.ic" NAME="Main (1) Coverage Results" MODIFIED="1618787736394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

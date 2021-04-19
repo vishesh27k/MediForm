@@ -10,8 +10,11 @@ public class Main extends Application {
     public static Patient patient;
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+    public void start(@org.jetbrains.annotations.NotNull Stage primaryStage) throws Exception{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/login.fxml"));
+
+        Parent root = loader.load();
         primaryStage.setTitle("MediForm");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
