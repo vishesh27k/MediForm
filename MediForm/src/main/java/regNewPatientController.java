@@ -63,10 +63,27 @@ public class regNewPatientController implements Initializable {
     private TextField dateOfVisit1;
 
     @FXML
-    void submitRegForm(ActionEvent event) throws IOException {
-        Patient patientInsert = new Patient(firstName1.getText(), lastName1.getText(), address1.getText(), city1.getText(), state1.getText(), phoneNumber1.getText(), emergContactName1.getText(), emergPhoneNumber1.getText(), insuranceProvider1.getText(), insuranceID1.getText(), primaryPhysician1.getText(), currentMeds1.getText(), medHistory1.getText(), reasonForVisit1.getText(), dateOfBirth1.getText(), dateOfVisit1.getText());
+    private TextField patientID1;
 
-        DatabaseInterface.insertPatient(patientInsert);
+    @FXML
+    void submitRegForm(ActionEvent event) throws IOException {
+        Main.patient.setName(firstName1.getText(), lastName1.getText());
+        Main.patient.setAddress(address1.getText());
+        Main.patient.setCity(city1.getText());
+        Main.patient.setState(state1.getText());
+        Main.patient.setPhone(phoneNumber1.getText());
+        Main.patient.setEmergencyContactName(emergContactName1.getText());
+        Main.patient.setEmergencyContactNumber(emergPhoneNumber1.getText());
+        Main.patient.setInsuranceProvider(insuranceProvider1.getText());
+        Main.patient.setInsuranceID(insuranceID1.getText());
+        Main.patient.setPrimaryPhysician(primaryPhysician1.getText());
+        Main.patient.setMedicationName(currentMeds1.getText());
+        Main.patient.setMedicalHistory(medHistory1.getText());
+        Main.patient.setSymptoms(reasonForVisit1.getText());
+        Main.patient.setDateOfBirth(dateOfBirth1.getText());
+        Main.patient.setDateOfVisit(dateOfVisit1.getText());
+
+        DatabaseInterface.insertPatient(Main.patient);
 
         Parent regHomeParent = FXMLLoader.load(getClass().getResource("regHome.fxml"));
         Scene regHomeScene = new Scene(regHomeParent);
@@ -78,6 +95,6 @@ public class regNewPatientController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        patientID1.setText(Main.patient.getPatientID()); 
     }
 }

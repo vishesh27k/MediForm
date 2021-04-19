@@ -37,12 +37,25 @@ public class viewNotesController implements Initializable{
 
     @FXML
     void toMainMenu1(ActionEvent event) throws IOException {
-        Parent newNoteParent = FXMLLoader.load(getClass().getResource("physicianMenu.fxml"));
-        Scene newNoteScene = new Scene(newNoteParent);
-
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(newNoteScene);
-        window.show();
+
+        switch(Main.user.getRoleID()) {
+            case 2:
+            Parent nurseMenuParent = FXMLLoader.load(getClass().getResource("nurseMenu.fxml"));
+            Scene nurseMenuScene = new Scene(nurseMenuParent);
+    
+            window.setScene(nurseMenuScene);
+            window.show();
+            break;
+        
+        case 3:
+            Parent physicianMenuParent = FXMLLoader.load(getClass().getResource("physicianMenu.fxml"));
+            Scene physicianMenuScene = new Scene(physicianMenuParent);
+    
+            window.setScene(physicianMenuScene);
+            window.show();
+            break;
+        }
     }
 
     @Override

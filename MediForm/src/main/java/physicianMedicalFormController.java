@@ -131,5 +131,101 @@ public class physicianMedicalFormController implements Initializable{
         s = Main.patient.getPulseRate();
         if(s == null) pulseRate1.setText("");
         else pulseRate1.setText(s);
+
+        
+        symptoms1.setText(Main.patient.getSymptoms());
+
+        StringBuilder sb = new StringBuilder();
+
+        if(Main.patient.getPain() != 0) {
+            sb.append("Pain: ");
+            sb.append(Main.patient.getPain());
+            sb.append("; ");
+        }
+        if(Main.patient.getAnticoagulant() != 0) {
+            sb.append("Anticoagulant: ");
+            sb.append(Main.patient.getAnticoagulant());
+            sb.append("; ");
+        }
+        if(Main.patient.getBetaBlocker() != 0) {
+            sb.append("Beta Blocker: ");
+            sb.append(Main.patient.getBetaBlocker());
+            sb.append("; ");
+        }
+        if(Main.patient.getAntiretroviral() != 0) {
+            sb.append("Antiretroviral: ");
+            sb.append(Main.patient.getAntiretroviral());
+            sb.append("; ");
+        }
+        if(Main.patient.getInsulin() != 0) {
+            sb.append("Insulin: ");
+            sb.append(Main.patient.getInsulin());
+            sb.append("; ");
+        }
+        if(Main.patient.getAntiInflammatory() != 0) {
+            sb.append("Anti Inflammatory: ");
+            sb.append(Main.patient.getAntiInflammatory());
+            sb.append("; ");
+        }
+        if(Main.patient.getUrsodiol() != 0) {
+            sb.append("Ursodiol: ");
+            sb.append(Main.patient.getUrsodiol());
+            sb.append("; ");
+        }
+        if(Main.patient.getCalciumReducer() != 0) {
+            sb.append("Calcium Reducer: ");
+            sb.append(Main.patient.getCalciumReducer());
+            sb.append("; ");
+        }
+
+        medications1.setText(sb.toString());
+        sb.setLength(0);
+
+        if(Main.patient.getNucleicAcid())
+            sb.append("Calcium Reducer; ");
+        if(Main.patient.getCoagulationPanel())
+            sb.append("Coagulation Panel; ");
+        if(Main.patient.getDheaSulfateSerum())
+            sb.append("Dhea Sulfate Serum; ");
+        if(Main.patient.getcReactiveProtein())
+            sb.append("C Reactive Protein; ");
+        if(Main.patient.getAlc())
+            sb.append("ALC; ");
+        if(Main.patient.getXray())
+            sb.append("XRay; ");
+        if(Main.patient.getMri())
+            sb.append("MRI; ");
+        if(Main.patient.getCtScan())
+            sb.append("CT Scan; ");
+        if(Main.patient.getUrinalysis())
+            sb.append("Urinalysis; ");
+        if(Main.patient.getStoolCultures())
+            sb.append("Stool Cultures; ");
+
+        tests1.setText(sb.toString());
+        sb.setLength(0);
+
+        if(Main.patient.getBrokenBone())
+            sb.append("Broken bone; ");
+        if(Main.patient.getHeartAttack())
+            sb.append("Heart attack; ");
+        if(Main.patient.getLaceration())
+            sb.append("Laceration; ");
+        if(Main.patient.getHivAIDS())
+            sb.append("HIV/AIDS; ");
+        if(Main.patient.getLiverFailure())
+            sb.append("Liver failure; ");
+        if(Main.patient.getKidneyFailure())
+            sb.append("Kidney Failure; ");
+        if(Main.patient.getDiabetes())
+            sb.append("Diabetes; ");
+        if(Main.patient.getInfammatoryBowlDisease())
+            sb.append("Inflammatory bowl disease; ");
+        if(Main.patient.getStroke())
+            sb.append("Stroke; ");
+        if(Main.patient.getTornMuscleTendon())
+            sb.append("Torn muscle/Tendon; ");
+
+        diagnosis1.setText(sb.toString());
     }
 }
