@@ -67,6 +67,8 @@ public class regNewPatientController implements Initializable {
 
     @FXML
     void submitRegForm(ActionEvent event) throws IOException {
+        Main.patient = new Patient();
+
         Main.patient.setName(firstName1.getText(), lastName1.getText());
         Main.patient.setAddress(address1.getText());
         Main.patient.setCity(city1.getText());
