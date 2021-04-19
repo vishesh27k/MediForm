@@ -67,8 +67,6 @@ public class regNewPatientController implements Initializable {
 
     @FXML
     void submitRegForm(ActionEvent event) throws IOException {
-        Main.patient = new Patient();
-
         Main.patient.setName(firstName1.getText(), lastName1.getText());
         Main.patient.setAddress(address1.getText());
         Main.patient.setCity(city1.getText());
@@ -97,6 +95,9 @@ public class regNewPatientController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        Patient reset = new Patient();
+        Main.patient = reset;
+        
         patientID1.setText(Main.patient.getPatientID()); 
     }
 }
