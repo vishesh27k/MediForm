@@ -81,6 +81,7 @@ public class viewRegFormController implements Initializable{
         String[] nameSplit = name.split(" ");
         firstName1.setText(nameSplit[0]);
         lastName1.setText(nameSplit[1]);
+        patientID1.setText(Main.patient.getPatientID());
 
         dateOfBirth1.setText(Main.patient.getDateOfBirth());
         address1.setText(Main.patient.getAddress());
