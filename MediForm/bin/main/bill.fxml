@@ -20,13 +20,13 @@
       <Label layoutX="150.0" layoutY="211.0" text="Testing Cost:" />
       <Label layoutX="143.0" layoutY="244.0" text="Overnight Cost:" />
       <Label layoutX="150.0" layoutY="301.0" text="Total Cost:" />
-      <TextField fx:id="firstName" layoutX="226.0" layoutY="73.0" />
-      <TextField fx:id="lastName" layoutX="226.0" layoutY="103.0" />
-      <TextField fx:id="pateintID" layoutX="226.0" layoutY="139.0" prefHeight="26.0" prefWidth="62.0" />
-      <TextField fx:id="medCost" layoutX="242.0" layoutY="171.0" prefHeight="26.0" prefWidth="82.0" />
-      <TextField fx:id="testCost" layoutX="226.0" layoutY="207.0" prefHeight="26.0" prefWidth="62.0" />
-      <TextField fx:id="overnightCost" layoutX="234.0" layoutY="240.0" prefHeight="26.0" prefWidth="62.0" />
-      <TextField fx:id="totalCost" layoutX="214.0" layoutY="297.0" prefHeight="26.0" prefWidth="90.0" />
+      <TextField layoutX="226.0" layoutY="73.0" />
+      <TextField layoutX="226.0" layoutY="103.0" />
+      <TextField layoutX="226.0" layoutY="139.0" prefHeight="26.0" prefWidth="62.0" />
+      <TextField layoutX="242.0" layoutY="171.0" prefHeight="26.0" prefWidth="82.0" />
+      <TextField layoutX="226.0" layoutY="207.0" prefHeight="26.0" prefWidth="62.0" />
+      <TextField layoutX="234.0" layoutY="240.0" prefHeight="26.0" prefWidth="62.0" />
+      <TextField layoutX="214.0" layoutY="297.0" prefHeight="26.0" prefWidth="90.0" />
       <Button layoutX="507.0" layoutY="352.0" mnemonicParsing="false" onAction="#toEnterID" text="Print" />
       <Button layoutX="33.0" layoutY="352.0" mnemonicParsing="false" onAction="#toEnterID" text="Back" />
    </children>

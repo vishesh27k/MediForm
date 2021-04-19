@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="regHomeController">
+   <children>
+      <Button layoutX="260.0" layoutY="148.0" mnemonicParsing="false" onAction="#toRegNewPatient" text="New Patient" />
+      <Button layoutX="219.0" layoutY="200.0" mnemonicParsing="false" onAction="#toEnterId" text="Display Existing Patient Info" />
+      <Label layoutX="155.0" layoutY="31.0" text="Registration Menu">
+         <font>
+            <Font name="Times New Roman Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="65.0" layoutY="338.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+   </children>
+</AnchorPane>

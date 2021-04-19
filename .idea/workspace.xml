@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0d155e9-b2df-4ee7-a375-8848d2d8eee9" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="f0d155e9-b2df-4ee7-a375-8848d2d8eee9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/.settings/org.eclipse.buildship.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/DatabaseInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/DatabaseInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/Patient.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/Patient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/bill.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/bill.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/billController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/billController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/diagnose.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/diagnose.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/diagnoseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/diagnoseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/enterIDController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/enterIDController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/enterVitalsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/enterVitalsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/loginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/loginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/newNoteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/newNoteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/nurseMedicalFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/nurseMedicalFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/nurseMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/nurseMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/orderMedsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/orderMedsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/orderTestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/orderTestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/physicianMedicalFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/physicianMedicalFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/physicianMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/physicianMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/printDischargeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/printDischargeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/regHome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/regHome.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/regHomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/regHomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/regNewPatientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/regNewPatientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/viewNotesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/viewNotesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediForm/bin/main/viewRegFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/MediForm/bin/main/viewRegFormController.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,21 +38,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1q7eV6OupXziTKEEviT92uEXlaF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/MediForm" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="16" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Launcher.java" />
+      <module name="MediForm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -45,12 +75,11 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
