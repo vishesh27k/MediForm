@@ -2,8 +2,7 @@ public class User {
     public String name;
     public String password;
    
-    public User() {
-    }
+    public User() {}
 
     public User(User userCopy) {
         this.name = userCopy.getName();
