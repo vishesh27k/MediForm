@@ -1,7 +1,6 @@
 public class User {
     public String name;
     public String password;
-    public int roleID;
 
     public User() {
     }
