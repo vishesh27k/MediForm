@@ -1,5 +1,5 @@
 public class User {
-    public String cookie;
+    public String name;
     public String password;
     public int roleID;
 
