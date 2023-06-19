@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     public static User user;
+    
     public static Patient patient;
 
     @Override
