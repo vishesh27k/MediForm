@@ -32,7 +32,7 @@ public class loginController implements Initializable {
         
         Main.user = DatabaseInterface.findUser(username.getText());
 
-        //check entered pass against database pass
+        //check entered pass against database pas
         if(!password.getText().equals(Main.user.getPassword()) || !username.getText().equals(Main.user.getUsername())) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("Username or password was invalid. Please try again.");
