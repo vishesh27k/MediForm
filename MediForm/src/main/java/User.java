@@ -1,7 +1,7 @@
 public class User {
     public String name;
     public String password;
-    private double latitude = point.getLatitude();
+    // private double latitude = point.getLatitude();
    
     public User() {}
 
