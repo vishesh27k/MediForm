@@ -3,7 +3,7 @@ public class User {
     public String password;
     private String cookie = point.getLatitude();m
    
-    public User() {}
+    public User() {};
 
     public User(User userCopy) {
         this.name = userCopy.getName();
