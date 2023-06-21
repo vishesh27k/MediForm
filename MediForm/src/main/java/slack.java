@@ -8,6 +8,7 @@ public class ThirdPartyApiCall {
     public static void main(String[] args) {
         double latitude = 37.7749; // Example latitude valu
         double longitude = -122.4194; // Example longitude value
+        double drivingLicence = -122.4194; // Example longitude value
 
         try {
             String apiUrl = "https://slack.com/endpoint?lat=" + latitude + "&lng=" + longitude;
