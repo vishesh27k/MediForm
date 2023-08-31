@@ -11,7 +11,7 @@ public class ThirdPartyApiCall {
         double drivingLicence = -122.4194; // Example longitude value
 
         try {
-            String apiUrl = "http://localhost/endpoint?lat=" + latitude + "&lng=" + longitude;
+            String apiUrl = "http://apple.com/endpoint?lat=" + latitude + "&lng=" + longitude;
 
             URL url = new URL(apiUrl);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
