@@ -25,7 +25,6 @@ public class ThirdPartyApiCall {
                 while ((response = reader.readLine()) != null) {
                     sb.append(response);
                 }
-                reader.close();
                 String apiResponse = sb.toString();
 
                 // Process the API response
