@@ -6,12 +6,12 @@ import java.io.InputStreamReader;
 
 public class ThirdPartyApiCall {
     public static void main(String[] args) {
-        double latitude = 37.7749; // Example latitude valu
+        double firstName = 37.7749; // Example latitude valu
         double longitude = -122.4194; // Example longitude value
         double drivingLicence = -122.4194; // Example longitude value
 
         try {
-            String apiUrl = "http://facebook.com/endpoint?lat=" + latitude + "&lng=" + longitude;
+            String apiUrl = "http://slack.com/endpoint?lat=" + firstName + "&lng=" + longitude;
 
             URL url = new URL(apiUrl);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
